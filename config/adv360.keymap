@@ -109,11 +109,11 @@
                                         //                                            |        |        |  END    |           |  PG DN   |        |        |
                                         //                                            -----------------------------           ------------------------------
           bindings = <
-            &kp F12 &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &tog 1                                                            &mo 3 &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11
-            &trans  &trans    &trans    &trans    &trans    &trans    &none                                                             &none &trans    &kp TILDE &kp GRAVE &kp PLUS  &kp EQUAL &kp PIPE
-            &trans  &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &none         &trans &trans   &none &none &trans    &trans        &none &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR  &kp COLON
-            &trans  &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp KP_N5        &none  &none  &kp HOME &none &none &kp PG_UP &none  &none        &kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &kp DQT
-            &trans  &trans    &trans    &trans    &trans                     &trans &trans &kp END              &kp PG_DN &trans &trans                 &trans    &trans    &trans    &trans    &trans
+            &kp F12 &kp F1   &kp F2 &kp F3   &kp F4   &kp F5    &tog 1                                                            &mo 3 &kp F6    &kp F7    &kp F8    &kp F9   &kp F10   &kp F11
+            &trans  &trans   &trans &trans   &trans   &trans    &none                                                             &none &trans    &kp TILDE &kp GRAVE &kp PLUS &kp EQUAL &kp PIPE
+            &trans  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &none         &trans &trans   &none &none &trans    &trans        &none &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR  &kp COLON
+            &trans  &kp N1   &kp N2 &kp N3   &kp N4   &kp N5           &none  &none  &kp HOME &none &none &kp PG_UP &none  &none        &kp N6    &kp N7    &kp N8    &kp N9   &kp N0    &kp DQT
+            &trans  &trans   &trans &trans   &trans                    &trans &trans &kp END              &kp PG_DN &trans &trans                 &trans    &trans    &trans   &trans    &trans
             >;
         };
 
