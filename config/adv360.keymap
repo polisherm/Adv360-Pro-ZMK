@@ -131,7 +131,7 @@
                                         // ---------------------------------------------------------------------           --------------------------------------------------------------------
                                         // |        |   BT0   |   BT1   |   BT2   |   BT3   |   BT4   |        |           | Mod  |   BT0   |   BT1   |   BT2   |   BT3   |   BT4   |         |
                                         // |        |         |         |         |         |         | BT_CLR |           | None |         |         |         |         |         |         |
-                                        // |        |   Mute  | VolDown |  VolUp  |         |         |        |           | None |         |         |         |         |         |         |
+                                        // |        |         |  Mute   | VolDown |  VolUp  |         |        |           | None |         |         |         |         |         |         |
                                         // |        |         |         |         |         |         |---------           -------|         |         |         |         |         |         |
                                         // |        |         |         |         |         |----------                           ----------|         |         |         |         |         |
                                         // --------------------------------------------------                                               ---------------------------------------------------
@@ -147,7 +147,7 @@
           bindings = <
             &none        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                                                     &trans                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
             &none        &none        &none        &none        &none        &none        &bootloader                                                                                               &bootloader            &none        &none        &none        &none        &none        &none
-            &none        &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &none        &none        &rgb_ug RGB_MEFS_CMD 5                 &bt BT_CLR &none &none &none &bt BT_CLR &bt BT_CLR                 &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none        &none        &none
+            &none        &none        &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &none        &rgb_ug RGB_MEFS_CMD 5                 &bt BT_CLR &none &none &none &bt BT_CLR &bt BT_CLR                 &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none        &none        &none
             &none        &none        &none        &none        &none        &none                               &none           &none      &none &none &none &none      &none      &none                                  &none        &none        &none        &none        &none        &none
             &none        &none        &none        &bl BL_INC   &bl BL_DEC                                       &rgb_ug RGB_TOG &bl BL_TOG &none             &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none        &none        &none
             >;
