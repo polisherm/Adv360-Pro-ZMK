@@ -104,7 +104,7 @@
                                         // -----------------------------------------------------------------           -----------------------------------------------------------------
                                         // |  F12   |   F1   |   F2   |   F3   |   F4   |   F5   |   Kp   |           | Mod  |   F6   |   F7   |   F8   |   F9    |   F10   |   F11   |
                                         // |        |        |        |        |        |        |        |           |      |        |   ~    |  `/~   |    +    |   =/+   |    |    |
-                                        // |        |   1    |   2    |   3    |   4    |   5    |        |           |      |   6    |   7    |   8    |    9    |    0    |    :    |
+                                        // |        |   1    |   2    |   3    |   4    |   5    |        |           |      |   6    |   7    |   8    |    9    |    0    |   -/_   |
                                         // |        |   !    |   @    |   #    |   $    |   %    |---------           -------|   ^    |   &    |   *    |    (    |    )    |    "    |
                                         // |        |        |        |        |        |---------                           ---------|        |        |         |         |         |
                                         // ----------------------------------------------                                              ------------------------------------------------
@@ -120,7 +120,7 @@
           bindings = <
             &kp F12 &kp F1   &kp F2 &kp F3   &kp F4   &kp F5    &tog 1                                                            &mo 3 &kp F6    &kp F7    &kp F8    &kp F9   &kp F10   &kp F11
             &trans  &trans   &trans &trans   &trans   &trans    &none                                                             &none &trans    &kp TILDE &kp GRAVE &kp PLUS &kp EQUAL &kp PIPE
-            &trans  &kp N1   &kp N2 &kp N3   &kp N4   &kp N5    &none         &trans &trans   &none &none &trans    &trans        &none &kp N6    &kp N7    &kp N8    &kp N9   &kp N0    &kp COLON
+            &trans  &kp N1   &kp N2 &kp N3   &kp N4   &kp N5    &none         &trans &trans   &none &none &trans    &trans        &none &kp N6    &kp N7    &kp N8    &kp N9   &kp N0    &kp MINUS
             &trans  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT        &none  &none  &kp HOME &none &none &kp PG_UP &none  &none        &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR  &kp DQT
             &trans  &trans   &trans &trans   &trans                    &trans &trans &kp END              &kp PG_DN &trans &trans                 &trans    &trans    &trans   &trans    &trans
             >;
