@@ -49,9 +49,9 @@
                                         // DEFAULT
                                         // -----------------------------------------------------------------------           ----------------------------------------------------------------------
                                         // |   ESC    |    1    |    2    |    3    |    4    |    5    |   Kp   |           | Mod  |    6    |    7    |    8    |    9    |    0     |   \/|    |
-                                        // |   TAB    |   "/'   |   </,   |   >/.   |    P    |    Y    |  None  |           | None |    F    |    G    |    C    |    R    |    L     |   -/_    |
+                                        // |   TAB    |   "/'   |   </,   |   >/.   |    P    |    Y    |  None  |           | None |    F    |    G    |    K    |    R    |    L     |   -/_    |
                                         // |  LCTRL   |    A    |    O    |    E    |    U    |    I    |  None  |           | None |    D    |    H    |    T    |    N    |    S     |   //?    |
-                                        // |  LSHIFT  |   ;/:   |    Q    |    J    |    K    |    X    |---------           -------|    B    |    M    |    W    |    V    |    Z     |  RSHIFT  |
+                                        // |  LSHIFT  |   ;/:   |    Q    |    C    |    J    |    X    |---------           -------|    B    |    M    |    W    |    V    |    Z     |  RSHIFT  |
                                         // |   Fn     |   `/~   |   ESC   |    [    |    ]    |----------                           ----------|   LEFT  |   DOWN  |    UP   |  RIGHT   |   Fn     |
                                         // ----------------------------------------------------                                                ----------------------------------------------------
                                         //
@@ -65,9 +65,9 @@
                                         //                               ------------------------------------------           -------------------------------------
       bindings = <
         &kp ESC   &kp N1    &kp N2    &kp N3           &kp N4            &kp N5 &tog 1                                                                                                  &mo 3 &kp N6 &kp N7   &kp N8   &kp N9 &kp N0    &kp BSLH
-        &kp TAB   &kp SQT   &kp COMMA &kp DOT          &kp P             &kp Y  &none                                                                                                   &none &kp F  &kp G    &kp C    &kp R  &kp L     &kp MINUS  
+        &kp TAB   &kp SQT   &kp COMMA &kp DOT          &kp P             &kp Y  &none                                                                                                   &none &kp F  &kp G    &kp K    &kp R  &kp L     &kp MINUS  
         &kp LCTRL &kp A     &kp O     &kp E            &kp U             &kp I  &none               &kp LCTRL   &kp LALT        &none &none &kp LGUI          &kp RALT                  &none &kp D  &kp H    &kp T    &kp N  &kp S     &kp FSLH
-        &kp LSHFT &kp SEMI  &kp Q     &kp J            &kp K             &kp X         &none        &none       &mo 2           &none &none &mo 2             &none       &none               &kp B  &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
+        &kp LSHFT &kp SEMI  &kp Q     &kp C            &kp J             &kp X         &none        &none       &mo 2           &none &none &mo 2             &none       &none               &kp B  &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
         &mo 2     &kp GRAVE &kp ESC   &kp LEFT_BRACKET &kp RIGHT_BRACKET               &kp DELETE   &lt 2 SPACE &kp LS(LC(F1))              &kp LS(LC(F6))    &lt 2 ENTER &kp BACKSPACE              &kp LEFT &kp DOWN &kp UP &kp RIGHT &mo 2
             >;
         };
