@@ -19,12 +19,12 @@
 #include <dt-bindings/zmk/backlight.h>
 
 &mt {
-    tapping-term-ms = <210>;
+    tapping-term-ms = <150>;
     flavor = "tap-preferred";
 };
 
 &lt {
-    quick_tap_ms = <200>;
+    quick_tap_ms = <150>;
 };
 
 / {
@@ -76,7 +76,7 @@
                                         // KEYPAD
                                         // -----------------------------------------------------------------------           ----------------------------------------------------------------------
                                         // |   +/=    |    1    |    2    |    3    |    4    |    5    | &trans |           | Mod  |    6    | NUMLOCK |    =    |    /    |    *     |   -/_    |
-                                        // |   TAB    |    Q    |    W    |    E    |    R    |    T    |  None  |           | None |    Y    |    7    |    8    |    9    |    -     |   \/|    |
+                                        // |   TAB    |    Q    |    W    |    E    |    R    |    T    |  None  |           | None |    Y    |    7    |    8    |    9    |    -     |    _     |
                                         // |   ESC    |    A    |    S    |    D    |    F    |    G    |  None  |           | None |    H    |    4    |    5    |    6    |    +     |   '/"    |
                                         // |  LSHIFT  |    Z    |    X    |    C    |    V    |    B    |---------           -------|    N    |    1    |    2    |    3    |  ENTER   |  RSHIFT  |
                                         // |   Fn     |   `/~   |   CAPS  |  LEFT   |  RIGHT  |----------                           ----------|   UP    |   DOWN  |    .    |    ]     |   Fn     |
@@ -92,7 +92,7 @@
                                         //                                            -----------------------------           ------------------------------
           bindings = <
             &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4    &kp N5 &trans                                                                       &mo 3 &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
-            &kp TAB   &kp Q     &kp W    &kp E    &kp R     &kp T  &none                                                                        &none &kp Y  &kp N7     &kp N8       &kp N9        &kp KP_MINUS    &kp BSLH
+            &kp TAB   &kp Q     &kp W    &kp E    &kp R     &kp T  &none                                                                        &none &kp Y  &kp N7     &kp N8       &kp N9        &kp KP_MINUS    &kp UNDER
             &kp ESC   &kp A     &kp S    &kp D    &kp F     &kp G  &none           &kp LCTRL &kp LALT &none &none &kp LGUI  &kp RCTRL           &none &kp H  &kp N4     &kp N5       &kp N6        &kp KP_PLUS     &kp SQT
             &kp LSHFT &kp Z     &kp X    &kp C    &kp V     &kp B         &none    &none     &kp HOME &none &none &kp PG_UP &none     &none           &kp N  &kp N1     &kp N2       &kp N3        &kp KP_ENTER    &kp RSHFT
             &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT               &kp BSPC &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp N0                 &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
