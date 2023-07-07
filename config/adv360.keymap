@@ -24,7 +24,7 @@
 };
 
 &lt {
-    quick_tap_ms = <150>;
+    quick_tap_ms = <100>;
 };
 
 / {
