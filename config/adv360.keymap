@@ -4,6 +4,15 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 
+&mt {
+    tapping-term-ms = <150>;
+    flavor = "tap-preferred";
+};
+
+&lt {
+    quick_tap_ms = <100>;
+};
+
 / {
     behaviors {
       #include "macros.dtsi"
@@ -23,39 +32,110 @@
     compatible = "zmk,keymap";
 
     default_layer {
+                                        // DEFAULT
+                                        // ------------------------------------------------------------------------           -----------------------------------------------------------------------
+                                        // |   ESC     |    1    |    2    |    3    |    4    |    5    |   Kp   |           | Mod  |    6    |    7    |    8    |    9    |    0     |    \/|    |
+                                        // |   TAB     |   "/'   |   </,   |   >/.   |    P    |    Y    |  None  |           | None |    F    |    G    |    C    |    R    |    L     |    -/_    |
+                                        // |  LCTRL    |    A    |    O    |    E    |    U    |    I    |  None  |           | None |    D    |    H    |    T    |    N    |    S     |    //?    |
+                                        // | LSHIFT/Fn |   ;/:   |    Q    |    J    |    K    |    X    |---------           -------|    B    |    M    |    W    |    V    |    Z     | RSHIFT/Fn |
+                                        // |    Fn     |   `/~   |   ESC   |    [    |    ]    |----------                           ----------|   LEFT  |   DOWN  |    UP   |  RIGHT   |    Fn     |
+                                        // -----------------------------------------------------                                                -----------------------------------------------------
+                                        //
+                                        //                                                                        Thumb Cluster
+                                        //                                               --------------------------           ----------------------------
+                                        //                                               |  LCTRL   |    LALT     |           |     LGUI      |  RALT    |
+                                        //                               ------------------------------------------           -------------------------------------
+                                        //                               |               |          |     Fn      |           |      Fn       |          |        |
+                                        //                               |    DELETE     | SPACE/Fn |--------------           ----------------| ENTER/Fn |  BSPC  |
+                                        //                               |               |          | LS(LC(F1))  |           |   LS(LC(F6))  |          |        |
+                                        //                               ------------------------------------------           -------------------------------------
       bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog 1                                                           &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+        &kp ESC   &kp N1    &kp N2    &kp N3           &kp N4            &kp N5 &tog 1                                                                                 &mo 3 &kp N6 &kp N7   &kp N8   &kp N9 &kp N0    &kp BSLH
+        &kp TAB   &kp SQT   &kp COMMA &kp DOT          &kp P             &kp Y  &none                                                                                  &none &kp F  &kp G    &kp C    &kp R  &kp L     &kp MINUS
+        &kp LCTRL &kp A     &kp O     &kp E            &kp U             &kp I  &none             &kp LCTRL    &kp LALT       &kp LGUI       &kp RALT                  &none &kp D  &kp H    &kp T    &kp N  &kp S     &kp FSLH
+        &kp LSHFT &kp SEMI  &kp Q     &kp J            &kp K             &kp X                                 &mo 2          &mo 2                                          &kp B  &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
+        &mo 2     &kp GRAVE &kp ESC   &kp LEFT_BRACKET &kp RIGHT_BRACKET               &kp DELETE &lt 2 SPACE  &kp LS(LC(F1)) &kp LS(LC(F6)) &lt 2 ENTER &kp BACKSPACE              &kp LEFT &kp DOWN &kp UP &kp RIGHT &mo 2
       >;
     };
-    keypad {
+
+    layer_keypad {
+                                        // KEYPAD
+                                        // ------------------------------------------------------------------------           -----------------------------------------------------------------------
+                                        // |   ESC     |    1    |    2    |    3    |    4    |    5    |   Kp   |           | Mod  |    6    | NUMLOCK |    =    |    /    |    *     |    -/_    |
+                                        // |   TAB     |   "/'   |   </,   |   >/.   |    P    |    Y    |  None  |           | None |    F    |    7    |    8    |    9    |    -     |    \/|    |
+                                        // |  LCTRL    |    A    |    O    |    E    |    U    |    I    |  None  |           | None |    D    |    4    |    5    |    6    |    +     |    '/"    |
+                                        // | LSHIFT/Fn |   ;/:   |    Q    |    J    |    K    |    X    |---------           -------|    B    |    1    |    2    |    3    |  ENTER   | RSHIFT/Fn |
+                                        // |    Fn     |   `/~   |   ESC   |    [    |    ]    |----------                           ----------|   UP    |   DOWN  |    .    |    ]     |    Fn     |
+                                        // -----------------------------------------------------                                                -----------------------------------------------------
+                                        //
+                                        //                                                                        Thumb Cluster
+                                        //                                               --------------------------           ----------------------------
+                                        //                                               |  LCTRL   |    LALT     |           |     LGUI      |  RALT    |
+                                        //                               ------------------------------------------           -------------------------------------
+                                        //                               |               |          |     Fn      |           |      Fn       |          |        |
+                                        //                               |    DELETE     | SPACE/Fn |--------------           ----------------| ENTER/Fn |  BSPC  |
+                                        //                               |               |          | LS(LC(F1))  |           |   LS(LC(F6))  |          |        |
+                                        //                               ------------------------------------------           -------------------------------------
       bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &trans                                                           &mo 3 &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
-        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &none &kp Y  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
-        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none &kp H  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp SQT
-        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                           &kp N  &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp RSHFT
-        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp KP_N0              &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
+        &kp ESC   &kp N1    &kp N2    &kp N3           &kp N4            &kp N5 &tog 1                                                                         &mo 3 &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
+        &kp TAB   &kp SQT   &kp COMMA &kp DOT          &kp P             &kp Y  &none                                                                          &none &kp F  &kp N7     &kp N8       &kp N9        &kp KP_MINUS    &kp BSLH
+        &kp LCTRL &kp A     &kp O     &kp E            &kp U             &kp I  &none             &kp LCTRL    &kp LALT       &kp LGUI       &kp RALT          &none &kp D  &kp N4     &kp N5       &kp N6        &kp KP_PLUS     &kp SQT
+        &kp LSHFT &kp SEMI  &kp Q     &kp J            &kp K             &kp X                                 &mo 2          &mo 2                                  &kp B  &kp N1     &kp N2       &kp N3        &kp KP_ENTER    &kp RSHFT
+        &mo 2     &kp GRAVE &kp ESC   &kp LEFT_BRACKET &kp RIGHT_BRACKET               &kp DELETE &lt 2 SPACE  &kp LS(LC(F1)) &kp LS(LC(F6)) &lt 2 ENTER &kp 0              &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
       >;
     };
-    fn {
+
+    layer_fn {
+                                        // Fn
+                                        // -----------------------------------------------------------------           -----------------------------------------------------------------
+                                        // |  F12   |   F1   |   F2   |   F3   |   F4   |   F5   |   Kp   |           | Mod  |   F6   |   F7   |   F8   |   F9    |   F10   |   F11   |
+                                        // |        |        |        |        |        |        |        |           |      |        |   ~    |  `/~   |    +    |   =/+   |    _    |
+                                        // |        |   1    |   2    |   3    |   4    |   5    |        |           |      |   6    |   7    |   8    |    9    |    0    |   -/_   |
+                                        // |        |   !    |   @    |   #    |   $    |   %    |---------           -------|   ^    |   &    |   *    |    (    |    )    |    "    |
+                                        // |        |        |        |        |        |---------                           ---------|        |        |         |         |         |
+                                        // ----------------------------------------------                                              ------------------------------------------------
+                                        //
+                                        //                                                                        Thumb Cluster
+                                        //                                                     --------------------           ---------------------
+                                        //                                                     |        |         |           |          |        |
+                                        //                                            -----------------------------           -------------------------------
+                                        //                                            |        |        |  HOME   |           |  PG UP   |        |        |
+                                        //                                            |        |        |----------           --------   |        |        |
+                                        //                                            |        |        |  END    |           |  PG DN   |        |        |
+                                        //                                            -----------------------------           ------------------------------
       bindings = <
-        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog 1                                           &mo 3 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-        &trans &trans &trans &trans &trans &trans  &none                                           &none &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans &trans  &none        &trans &trans &trans &trans        &none &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans &trans                      &trans &trans                     &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans              &trans &trans &trans  &trans  &trans
+        &kp F12 &kp F1   &kp F2 &kp F3   &kp F4   &kp F5    &tog 1                                                &mo 3 &kp F6    &kp F7    &kp F8    &kp F9   &kp F10   &kp F11
+        &trans  &trans   &trans &trans   &trans   &trans    &none                                                 &none &trans    &kp TILDE &kp GRAVE &kp PLUS &kp EQUAL &kp UNDER
+        &trans  &kp N1   &kp N2 &kp N3   &kp N4   &kp N5    &none         &trans &trans   &trans    &trans        &none &kp N6    &kp N7    &kp N8    &kp N9   &kp N0    &kp MINUS
+        &trans  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                      &kp HOME &kp PG_UP                     &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR  &kp DQT
+        &trans  &trans   &trans &trans   &trans                    &trans &trans &kp END  &kp PG_DN &trans &trans                 &trans    &trans    &trans    &trans   &trans
       >;
     };
-    mod {
+
+    layer_mod {
+                                        // MODULE
+                                        // ---------------------------------------------------------------------           --------------------------------------------------------------------
+                                        // |        |   BT0   |   BT1   |   BT2   |   BT3   |   BT4   |        |           | Mod  |   BT0   |   BT1   |   BT2   |   BT3   |   BT4   |         |
+                                        // |        |         |         |         |         |         | BT_CLR |           | None |         |         |         |         |         |         |
+                                        // |        |         |  Mute   | VolDown |  VolUp  |         |        |           | None |         |         |         |         |         |         |
+                                        // |        |         |         |         |         |         |---------           -------|         |         |         |         |         |         |
+                                        // |        |         |         |         |         |----------                           ----------|         |         |         |         |         |
+                                        // --------------------------------------------------                                               ---------------------------------------------------
+                                        //
+                                        //                                                                        Thumb Cluster
+                                        //                                                     --------------------           ---------------------
+                                        //                                                     |        |         |           |          |        |
+                                        //                                            -----------------------------           -------------------------------
+                                        //                                            |        |        |         |           |          |        |        |
+                                        //                                            |        |        |----------           -----------|        |        |
+                                        //                                            |        |        |         |           |          |        |        |
+                                        //                                            -----------------------------           ------------------------------
       bindings = <
-        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                     &trans                 &none        &none        &none        &none &none &none
-        &none &none        &none        &none        &none        &none        &bootloader                                                               &bootloader            &none        &none        &none        &none &none &none
-        &none &none        &none        &none        &none        &none        &none                   &none &none &bt BT_CLR &none                      &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none &none &none
-        &none &none        &none        &none        &none        &none                                      &none &none                                                        &none        &none        &none        &none &none &none
-        &none &none        &none        &none        &none                                       &none &none &none &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none &none &none
+        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                                               &trans                 &bt BT_SEL_0 &bt BT_SEL_1 &bt BT_SEL_2 &bt BT_SEL_3 &bt BT_SEL_4 &none
+        &none &none        &none        &none        &none        &none        &bootloader                                                                                         &bootloader            &none        &none        &none        &none        &none        &none
+        &none &none        &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &none        &rgb_ug RGB_MEFS_CMD_5                 &none      &none &bt BT_CLR &none                            &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none        &none        &none
+        &none &none        &none        &none        &none        &none                                                          &none &none                                                              &none        &none        &none        &none        &none        &none
+        &none &none        &none        &bl BL_INC   &bl BL_DEC                                       &rgb_ug RGB_TOG &bl BL_TOG &none &none            &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none        &none        &none
       >;
     };
   };
