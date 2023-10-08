@@ -47,14 +47,14 @@
                                         //                               ------------------------------------------           -------------------------------------
                                         //                               |               |          |     Fn      |           |      Fn       |          |        |
                                         //                               |    DELETE     | SPACE/Fn |--------------           ----------------| ENTER/Fn |  BSPC  |
-                                        //                               |               |          | LS(LC(F1))  |           |   LS(LC(F6))  |          |        |
+                                        //                               |               |          |    F14      |           |      F15      |          |        |
                                         //                               ------------------------------------------           -------------------------------------
       bindings = <
         &kp ESC   &kp N1    &kp N2    &kp N3           &kp N4            &kp N5 &tog 1                                                                                 &mo 3 &kp N6 &kp N7   &kp N8   &kp N9 &kp N0    &kp BSLH
         &kp TAB   &kp SQT   &kp COMMA &kp DOT          &kp P             &kp Y  &none                                                                                  &none &kp F  &kp G    &kp C    &kp R  &kp L     &kp MINUS
         &kp LCTRL &kp A     &kp O     &kp E            &kp U             &kp I  &none             &kp LCTRL    &kp LALT       &kp LGUI       &kp RALT                  &none &kp D  &kp H    &kp T    &kp N  &kp S     &kp FSLH
         &kp LSHFT &kp SEMI  &kp Q     &kp J            &kp K             &kp X                                 &mo 2          &mo 2                                          &kp B  &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
-        &mo 2     &kp GRAVE &kp ESC   &kp LEFT_BRACKET &kp RIGHT_BRACKET               &kp DELETE &lt 2 SPACE  &kp LS(LC(F1)) &kp LS(LC(F6)) &lt 2 ENTER &kp BACKSPACE              &kp LEFT &kp DOWN &kp UP &kp RIGHT &mo 2
+        &mo 2     &kp GRAVE &kp ESC   &kp LEFT_BRACKET &kp RIGHT_BRACKET               &kp DELETE &lt 2 SPACE  &kp F14        &kp F15        &lt 2 ENTER &kp BACKSPACE              &kp LEFT &kp DOWN &kp UP &kp RIGHT &mo 2
       >;
     };
 
