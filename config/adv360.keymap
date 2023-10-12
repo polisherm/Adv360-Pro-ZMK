@@ -4,6 +4,12 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 
+// Define layers.
+#define DEFAULT 0
+#define KEYPAD 1
+#define FN 2
+#define MOD 3
+
 &mt {
     tapping-term-ms = <150>;
     flavor = "tap-preferred";
@@ -26,6 +32,21 @@
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
       };
+      td0: tap_dance_0 {
+        // Don't add space between `zmk` and `behavior-...`. Occur compiling error.
+        compatible = "zmk,behavior-tap-dance";
+        label = "TAP_DANCE_0";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp LS(LC(F6))>, <&kp PG_DN>;
+      };
+      td1: tap_dance_1 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TAP_DANCE_1";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp LS(LC(F1))>, <&kp END>, <&kp K_CONTEXT_MENU>;
+      };
     };
 
   keymap {
@@ -42,19 +63,19 @@
                                         // -----------------------------------------------------                                                -----------------------------------------------------
                                         //
                                         //                                                                        Thumb Cluster
-                                        //                                               --------------------------           ----------------------------
-                                        //                                               |  LCTRL   |    LALT     |           |     LGUI      |  RALT    |
-                                        //                               ------------------------------------------           -------------------------------------
-                                        //                               |               |          |     Fn      |           |      Fn       |          |        |
-                                        //                               |    DELETE     | SPACE/Fn |--------------           ----------------| ENTER/Fn |  BSPC  |
-                                        //                               |               |          | LS(LC(F1))  |           |   LS(LC(F6))  |          |        |
-                                        //                               ------------------------------------------           -------------------------------------
+                                        //                                               -------------------------------------           -----------------------------------
+                                        //                                               |  LCTRL   |    LALT                |           |     LGUI          |    RALT     |
+                                        //                               -----------------------------------------------------           --------------------------------------------
+                                        //                               |               |          |     HOME               |           |     Pg Up         |             |        |
+                                        //                               |    DELETE     | SPACE/Fn |-------------------------           --------------------|   ENTER/Fn  |  BSPC  |
+                                        //                               |               |          | LS(LC(F1))/END/ MENU   |           | LS(LC(F6))/Pg Dn  |             |        |
+                                        //                               -----------------------------------------------------           --------------------------------------------
       bindings = <
-        &kp ESC   &kp N1    &kp N2    &kp N3           &kp N4            &kp N5 &tog 1                                                                                 &mo 3 &kp N6 &kp N7   &kp N8   &kp N9 &kp N0    &kp BSLH
-        &kp TAB   &kp SQT   &kp COMMA &kp DOT          &kp P             &kp Y  &none                                                                                  &none &kp F  &kp G    &kp C    &kp R  &kp L     &kp MINUS
-        &kp LCTRL &kp A     &kp O     &kp E            &kp U             &kp I  &none             &kp LCTRL    &kp LALT       &kp LGUI       &kp RALT                  &none &kp D  &kp H    &kp T    &kp N  &kp S     &kp FSLH
-        &kp LSHFT &kp SEMI  &kp Q     &kp J            &kp K             &kp X                                 &mo 2          &mo 2                                          &kp B  &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
-        &mo 2     &kp GRAVE &kp ESC   &kp LEFT_BRACKET &kp RIGHT_BRACKET               &kp DELETE &lt 2 SPACE  &kp LS(LC(F1)) &kp LS(LC(F6)) &lt 2 ENTER &kp BACKSPACE              &kp LEFT &kp DOWN &kp UP &kp RIGHT &mo 2
+        &kp ESC    &kp N1    &kp N2    &kp N3           &kp N4            &kp N5 &tog 1                                                                        &mo MOD &kp N6 &kp N7   &kp N8   &kp N9 &kp N0    &kp BSLH
+        &kp TAB    &kp SQT   &kp COMMA &kp DOT          &kp P             &kp Y  &none                                                                         &none   &kp F  &kp G    &kp C    &kp R  &kp L     &kp MINUS
+        &kp LCTRL  &kp A     &kp O     &kp E            &kp U             &kp I  &none             &kp LCTRL     &kp LALT &kp LGUI  &kp RALT                   &none   &kp D  &kp H    &kp T    &kp N  &kp S     &kp FSLH
+        &kp LSHFT  &kp SEMI  &kp Q     &kp J            &kp K             &kp X                                  &kp HOME &kp PG_UP                                    &kp B  &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
+        &mo FN     &kp GRAVE &kp ESC   &kp LEFT_BRACKET &kp RIGHT_BRACKET               &kp DELETE &lt FN SPACE  &td1     &td0      &lt FN ENTER &kp BACKSPACE                &kp LEFT &kp DOWN &kp UP &kp RIGHT &mo FN
       >;
     };
 
@@ -77,11 +98,11 @@
                                         //                               |               |          | LS(LC(F1))  |           |   LS(LC(F6))  |          |        |
                                         //                               ------------------------------------------           -------------------------------------
       bindings = <
-        &kp ESC   &kp N1    &kp N2    &kp N3           &kp N4            &kp N5 &tog 1                                                                         &mo 3 &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
-        &kp TAB   &kp SQT   &kp COMMA &kp DOT          &kp P             &kp Y  &none                                                                          &none &kp F  &kp N7     &kp N8       &kp N9        &kp KP_MINUS    &kp BSLH
-        &kp LCTRL &kp A     &kp O     &kp E            &kp U             &kp I  &none             &kp LCTRL    &kp LALT       &kp LGUI       &kp RALT          &none &kp D  &kp N4     &kp N5       &kp N6        &kp KP_PLUS     &kp SQT
-        &kp LSHFT &kp SEMI  &kp Q     &kp J            &kp K             &kp X                                 &mo 2          &mo 2                                  &kp B  &kp N1     &kp N2       &kp N3        &kp KP_ENTER    &kp RSHFT
-        &mo 2     &kp GRAVE &kp ESC   &kp LEFT_BRACKET &kp RIGHT_BRACKET               &kp DELETE &lt 2 SPACE  &kp LS(LC(F1)) &kp LS(LC(F6)) &lt 2 ENTER &kp 0              &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
+        &kp ESC    &kp N1    &kp N2    &kp N3           &kp N4            &kp N5 &tog 1                                                                             &mo MOD &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
+        &kp TAB    &kp SQT   &kp COMMA &kp DOT          &kp P             &kp Y  &none                                                                              &none   &kp F  &kp N7     &kp N8       &kp N9        &kp KP_MINUS    &kp BSLH
+        &kp LCTRL  &kp A     &kp O     &kp E            &kp U             &kp I  &none             &kp LCTRL     &kp LALT        &kp LGUI        &kp RALT           &none   &kp D  &kp N4     &kp N5       &kp N6        &kp KP_PLUS     &kp SQT
+        &kp LSHFT  &kp SEMI  &kp Q     &kp J            &kp K             &kp X                                  &mo FN          &mo FN                                     &kp B  &kp N1     &kp N2       &kp N3        &kp KP_ENTER    &kp RSHFT
+        &mo FN     &kp GRAVE &kp ESC   &kp LEFT_BRACKET &kp RIGHT_BRACKET               &kp DELETE &lt FN SPACE  &kp LS(LC(F1))  &kp LS(LC(F6))  &lt FN ENTER &kp 0                &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo FN
       >;
     };
 
