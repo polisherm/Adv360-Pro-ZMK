@@ -37,29 +37,62 @@
         compatible = "zmk,behavior-tap-dance";
         label = "TAP_DANCE_0";
         #binding-cells = <0>;
-        tapping-term-ms = <200>;
+        tapping-term-ms = <150>;
         bindings = <&kp LS(LC(F6))>, <&kp PG_DN>;
       };
       td1: tap_dance_1 {
         compatible = "zmk,behavior-tap-dance";
         label = "TAP_DANCE_1";
         #binding-cells = <0>;
-        tapping-term-ms = <200>;
+        tapping-term-ms = <150>;
         bindings = <&kp LS(LC(F1))>, <&kp END>, <&kp K_CONTEXT_MENU>;
+      };
+      td2: tap_dance_macro_asc_and_ycu {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TAP_DANCE_1";
+        #binding-cells = <0>;
+        tapping-term-ms = <150>;
+        bindings = <&ycu>, <&asc>;
       };
     };
 
     macros {
-        all_select_copy: all_select_copy {
-            label = "all_select_copy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp A>
-                , <&macro_tap &kp C>
-                , <&macro_release &kp LCTRL>
-                ;
+        asc: all_select_copy {
+          label = "all_select_copy";
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings
+              = <&macro_press &kp LCTRL>
+              , <&macro_tap &kp A>
+              , <&macro_tap &kp C>
+              , <&macro_release &kp LCTRL>
+              ;
+        };
+        ycu: youtrack_copy_url {
+          label = "youtrack_copy_url";
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings
+              = <&macro_press &kp LCTRL>
+              , <&macro_tap &kp C>
+              , <&macro_tap &kp C>
+              , <&macro_release &kp LCTRL>
+              ;
+        };
+        // `LS(LC(LA(C))))` is also possible, but for the sake of readability I made this macro.
+        yct: youtrack_copy_title {
+          label = "youtrack_copy_title";
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings
+              = <&macro_press &kp LSHFT>
+              , <&macro_press &kp LCTRL>
+              , <&macro_press &kp LALT>
+              , <&macro_tap &kp C>
+              , <&macro_release &kp LSHFT>
+              , <&macro_release &kp LCTRL>
+              , <&macro_release &kp LALT>
+              ;
         };
     };
 
@@ -68,13 +101,13 @@
 
     default_layer {
                                         // DEFAULT
-                                        // ------------------------------------------------------------------------           -----------------------------------------------------------------------
-                                        // |   ESC     |    1    |    2    |    3    |    4    |    5    |   Kp   |           | Mod  |    6    |    7    |    8    |    9    |    0     |    \/|    |
-                                        // |   TAB     |   "/'   |   </,   |   >/.   |    P    |    Y    |  None  |           | None |    F    |    G    |    C    |    R    |    L     |    -/_    |
-                                        // |  LCTRL    |    A    |    O    |    E    |    U    |    I    |  None  |           | None |    D    |    H    |    T    |    N    |    S     |    //?    |
-                                        // | LSHIFT/Fn |   ;/:   |    Q    |    J    |    K    |    X    |---------           -------|    B    |    M    |    W    |    V    |    Z     | RSHIFT/Fn |
-                                        // |    Fn     |   `/~   |   ESC   |    [    |    ]    |----------                           ----------|   LEFT  |   DOWN  |    UP   |  RIGHT   |    Fn     |
-                                        // -----------------------------------------------------                                                -----------------------------------------------------
+                                        // --------------------------------------------------------------------------           -----------------------------------------------------------------------
+                                        // |   ESC     |    1    |    2    |    3    |    4    |    5    |   Kp     |           | Mod  |    6    |    7    |    8    |    9    |    0     |    \/|    |
+                                        // |   TAB     |   "/'   |   </,   |   >/.   |    P    |    Y    |  ycu/asc |           | None |    F    |    G    |    C    |    R    |    L     |    -/_    |
+                                        // |  LCTRL    |    A    |    O    |    E    |    U    |    I    |  ytc     |           | None |    D    |    H    |    T    |    N    |    S     |    //?    |
+                                        // | LSHIFT/Fn |   ;/:   |    Q    |    J    |    K    |    X    |-----------           -------|    B    |    M    |    W    |    V    |    Z     | RSHIFT/Fn |
+                                        // |    Fn     |   `/~   |   ESC   |    [    |    ]    |----------                             ----------|   LEFT  |   DOWN  |    UP   |  RIGHT   |    Fn     |
+                                        // -----------------------------------------------------                                                 ------------------------------------------------------
                                         //
                                         //                                                                        Thumb Cluster
                                         //                                               -------------------------------------           -----------------------------------
@@ -85,11 +118,11 @@
                                         //                               |               |          | LS(LC(F1))/END/ MENU   |           | LS(LC(F6))/Pg Dn  |             |        |
                                         //                               -----------------------------------------------------           --------------------------------------------
       bindings = <
-        &kp ESC    &kp N1    &kp N2    &kp N3           &kp N4            &kp N5 &tog 1                                                                                   &mo MOD &kp N6 &kp N7   &kp N8   &kp N9 &kp N0    &kp BSLH
-        &kp TAB    &kp SQT   &kp COMMA &kp DOT          &kp P             &kp Y  &all_select_copy                                                                         &none   &kp F  &kp G    &kp C    &kp R  &kp L     &kp MINUS
-        &kp LCTRL  &kp A     &kp O     &kp E            &kp U             &kp I  &kp LS(LC(LA(C)))            &kp LCTRL     &kp LALT &kp LGUI  &kp RALT                   &none   &kp D  &kp H    &kp T    &kp N  &kp S     &kp FSLH
-        &kp LSHFT  &kp SEMI  &kp Q     &kp J            &kp K             &kp X                                             &kp HOME &kp PG_UP                                    &kp B  &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
-        &mo FN     &kp GRAVE &kp ESC   &kp LEFT_BRACKET &kp RIGHT_BRACKET                          &kp DELETE &lt FN SPACE  &td1     &td0      &lt FN ENTER &kp BACKSPACE                &kp LEFT &kp DOWN &kp UP &kp RIGHT &mo FN
+        &kp ESC    &kp N1    &kp N2    &kp N3           &kp N4            &kp N5 &tog 1                                                                        &mo MOD &kp N6 &kp N7   &kp N8   &kp N9 &kp N0    &kp BSLH
+        &kp TAB    &kp SQT   &kp COMMA &kp DOT          &kp P             &kp Y  &td2                                                                          &none   &kp F  &kp G    &kp C    &kp R  &kp L     &kp MINUS
+        &kp LCTRL  &kp A     &kp O     &kp E            &kp U             &kp I  &yct              &kp LCTRL     &kp LALT &kp LGUI  &kp RALT                   &none   &kp D  &kp H    &kp T    &kp N  &kp S     &kp FSLH
+        &kp LSHFT  &kp SEMI  &kp Q     &kp J            &kp K             &kp X                                  &kp HOME &kp PG_UP                                    &kp B  &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
+        &mo FN     &kp GRAVE &kp ESC   &kp LEFT_BRACKET &kp RIGHT_BRACKET               &kp DELETE &lt FN SPACE  &td1     &td0      &lt FN ENTER &kp BACKSPACE                &kp LEFT &kp DOWN &kp UP &kp RIGHT &mo FN
       >;
     };
 
