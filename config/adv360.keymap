@@ -49,7 +49,7 @@
       };
       td2: tap_dance_macro_asc_and_ycu {
         compatible = "zmk,behavior-tap-dance";
-        label = "TAP_DANCE_1";
+        label = "TAP_DANCE_2";
         #binding-cells = <0>;
         tapping-term-ms = <150>;
         bindings = <&ycu>, <&asc>;
