@@ -37,21 +37,21 @@
         compatible = "zmk,behavior-tap-dance";
         label = "TAP_DANCE_0";
         #binding-cells = <0>;
-        tapping-term-ms = <150>;
+        tapping-term-ms = <185>;
         bindings = <&kp LS(LC(F6))>, <&kp PG_DN>;
       };
       td1: tap_dance_1 {
         compatible = "zmk,behavior-tap-dance";
         label = "TAP_DANCE_1";
         #binding-cells = <0>;
-        tapping-term-ms = <150>;
+        tapping-term-ms = <185>;
         bindings = <&kp LS(LC(F1))>, <&kp END>, <&kp K_CONTEXT_MENU>;
       };
       td2: tap_dance_macro_asc_and_ycu {
         compatible = "zmk,behavior-tap-dance";
         label = "TAP_DANCE_2";
         #binding-cells = <0>;
-        tapping-term-ms = <150>;
+        tapping-term-ms = <185>;
         bindings = <&ycu>, <&asc>;
       };
     };
