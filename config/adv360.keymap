@@ -54,6 +54,13 @@
         tapping-term-ms = <185>;
         bindings = <&ycu>, <&asc>;
       };
+      td3: tap_dance_fn_and_mod_layer {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TAP_DANCE_3";
+        #binding-cells = <0>;
+        tapping-term-ms = <185>;
+        bindings = <&mo FN>, <&mo MOD>;
+      };
     };
 
     macros {
@@ -118,11 +125,11 @@
                                         //                               |               |          | LS(LC(F1))/END/ MENU   |           | LS(LC(F6))/Pg Dn  |             |        |
                                         //                               -----------------------------------------------------           --------------------------------------------
       bindings = <
-        &kp ESC    &kp N1    &kp N2    &kp N3           &kp N4            &kp N5 &tog 1                                                                        &mo MOD &kp N6 &kp N7   &kp N8   &kp N9 &kp N0    &kp BSLH
-        &kp TAB    &kp SQT   &kp COMMA &kp DOT          &kp P             &kp Y  &td2                                                                          &none   &kp F  &kp G    &kp C    &kp R  &kp L     &kp MINUS
-        &kp LCTRL  &kp A     &kp O     &kp E            &kp U             &kp I  &yct              &kp LCTRL     &kp LALT &kp LGUI  &kp RALT                   &none   &kp D  &kp H    &kp T    &kp N  &kp S     &kp FSLH
-        &kp LSHFT  &kp SEMI  &kp Q     &kp J            &kp K             &kp X                                  &kp HOME &kp PG_UP                                    &kp B  &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
-        &mo FN     &kp GRAVE &kp ESC   &kp LEFT_BRACKET &kp RIGHT_BRACKET               &kp DELETE &lt FN SPACE  &td1     &td0      &lt FN ENTER &kp BACKSPACE                &kp LEFT &kp DOWN &kp UP &kp RIGHT &mo FN
+        &kp ESC   &kp N1    &kp N2    &kp N3           &kp N4            &kp N5 &tog 1                                                                        &mo MOD &kp N6 &kp N7   &kp N8   &kp N9 &kp N0    &kp BSLH
+        &kp TAB   &kp SQT   &kp COMMA &kp DOT          &kp P             &kp Y  &td2                                                                          &none   &kp F  &kp G    &kp C    &kp R  &kp L     &kp MINUS
+        &kp LCTRL &kp A     &kp O     &kp E            &kp U             &kp I  &yct              &kp LCTRL     &kp LALT &kp LGUI  &kp RALT                   &none   &kp D  &kp H    &kp T    &kp N  &kp S     &kp FSLH
+        &kp LSHFT &kp SEMI  &kp Q     &kp J            &kp K             &kp X                                  &kp HOME &kp PG_UP                                    &kp B  &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
+        &td3      &kp GRAVE &kp ESC   &kp LEFT_BRACKET &kp RIGHT_BRACKET               &kp DELETE &lt FN SPACE  &td1     &td0      &lt FN ENTER &kp BACKSPACE                &kp LEFT &kp DOWN &kp UP &kp RIGHT &mo FN
       >;
     };
 
