@@ -190,19 +190,19 @@
                                         // -----------------------------------------------------                                                -----------------------------------------------------
                                         //
                                         //                                                                        Thumb Cluster
-                                        //                                               --------------------------           ----------------------------
-                                        //                                               |  LCTRL   |    LALT     |           |     LGUI      |  RALT    |
-                                        //                               ------------------------------------------           -------------------------------------
-                                        //                               |               |          |     Fn      |           |      Fn       |          |        |
-                                        //                               |    DELETE     | SPACE/Fn |--------------           ----------------| ENTER/Fn |  BSPC  |
-                                        //                               |               |          | LS(LC(F1))  |           |   LS(LC(F6))  |          |        |
-                                        //                               ------------------------------------------           -------------------------------------
+                                        //                                               --------------------------           -------------------------------
+                                        //                                               |  LCTRL   |    LALT     |           |     LGUI      |  RALT       |
+                                        //                               ------------------------------------------           ----------------------------------------
+                                        //                               |               |          |     Fn      |           |      Fn       |             |        |
+                                        //                               |    DELETE     | SPACE/Fn |--------------           ----------------| ENTER/SHIFT |  BSPC  |
+                                        //                               |               |          | LS(LC(F1))  |           |   LS(LC(F6))  |             |        |
+                                        //                               ------------------------------------------           ----------------------------------------
       bindings = <
-        &kp ESC    &kp N1    &kp N2    &kp N3           &kp N4            &kp N5 &tog 1                                                                             &mo MOD &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
-        &kp TAB    &kp SQT   &kp COMMA &kp DOT          &kp P             &kp Y  &none                                                                              &none   &kp F  &kp N7     &kp N8       &kp N9        &kp KP_MINUS    &kp BSLH
-        &kp LCTRL  &kp A     &kp O     &kp E            &kp U             &kp I  &none             &kp LCTRL     &kp LALT        &kp LGUI        &kp RALT           &none   &kp D  &kp N4     &kp N5       &kp N6        &kp KP_PLUS     &kp SQT
-        &kp LSHFT  &kp SEMI  &kp Q     &kp J            &kp K             &kp X                                  &mo FN          &mo FN                                     &kp B  &kp N1     &kp N2       &kp N3        &kp KP_ENTER    &kp RSHFT
-        &mo FN     &kp GRAVE &kp ESC   &kp LEFT_BRACKET &kp RIGHT_BRACKET               &kp DELETE &lt FN SPACE  &kp LS(LC(F1))  &kp LS(LC(F6))  &lt FN ENTER &kp 0                &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo FN
+        &kp ESC    &kp N1    &kp N2    &kp N3           &kp N4            &kp N5 &tog 1                                                                                &mo MOD &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
+        &kp TAB    &kp SQT   &kp COMMA &kp DOT          &kp P             &kp Y  &none                                                                                 &none   &kp F  &kp N7     &kp N8       &kp N9        &kp KP_MINUS    &kp BSLH
+        &kp LCTRL  &kp A     &kp O     &kp E            &kp U             &kp I  &none             &kp LCTRL     &kp LALT        &kp LGUI        &kp RALT              &none   &kp D  &kp N4     &kp N5       &kp N6        &kp KP_PLUS     &kp SQT
+        &kp LSHFT  &kp SEMI  &kp Q     &kp J            &kp K             &kp X                                  &mo FN          &mo FN                                        &kp B  &kp N1     &kp N2       &kp N3        &kp KP_ENTER    &kp RSHFT
+        &mo FN     &kp GRAVE &kp ESC   &kp LEFT_BRACKET &kp RIGHT_BRACKET               &kp DELETE &lt FN SPACE  &kp LS(LC(F1))  &kp LS(LC(F6))  &lt RSHFT ENTER &kp 0                &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo FN
       >;
     };
 
