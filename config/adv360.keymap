@@ -22,6 +22,15 @@
 / {
     behaviors {
       #include "macros.dtsi"
+      #include "version.dtsi"
+      #ifndef VERSION_MACRO
+      macro_ver: macro_ver {
+        compatible = "zmk,behavior-macro";
+        label = "macro_version";
+        #binding-cells = <0>;
+        bindings = <&kp RET>;
+      };
+      #endif
 
       hm: homerow_mods {
           compatible = "zmk,behavior-hold-tap";
@@ -148,7 +157,7 @@
                                         // --------------------------------------------------------------------------           -----------------------------------------------------------------------
                                         // |   ESC     |    1    |    2    |    3    |    4    |    5    |   Kp     |           | Mod  |    6    |    7    |    8    |    9    |    0     |    \/|    |
                                         // |   TAB     |   "/'   |   </,   |   >/.   |    P    |    Y    |  ycu/asc |           | None |    F    |    G    |    C    |    R    |    L     |    -/_    |
-                                        // |  LCTRL    |    A    |    O    |    E    |    U    |    I    |  ytc     |           | None |    D    |    H    |    T    |    N    |    S     |    //?    |
+                                        // |  LCTRL    |    A    |    O    |    E    |    U    |    I    |  yct     |           | None |    D    |    H    |    T    |    N    |    S     |    //?    |
                                         // | LSHIFT/Fn |   ;/:   |    Q    |    J    |    K    |    X    |-----------           -------|    B    |    M    |    W    |    V    |    Z     | RSHIFT/Fn |
                                         // |    Fn     |   `/~   |   Mod   |    [    |    ]    |----------                             ----------|   LEFT  |   DOWN  |    UP   |  RIGHT   |    Fn     |
                                         // -----------------------------------------------------                                                 ------------------------------------------------------
@@ -246,7 +255,7 @@
         &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                                               &trans                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
         &none &none        &none        &none        &none        &none        &bootloader                                                                                         &bootloader            &none        &none        &none        &none        &none        &none
         &none &none        &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &none        &rgb_ug RGB_MEFS_CMD 5                 &none      &none &bt BT_CLR &none                            &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none        &none        &none
-        &none &cancel      &cut         &copy        &paste       &none                                                          &none &none                                                              &none        &none        &none        &none        &none        &none
+        &none &cancel      &cut         &copy        &paste       &macro_ver                                                     &none &none                                                              &none        &none        &none        &none        &none        &none
         &none &none        &none        &bl BL_INC   &bl BL_DEC                                       &rgb_ug RGB_TOG &bl BL_TOG &none &none            &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none        &none        &none
       >;
     };
