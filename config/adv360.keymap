@@ -46,14 +46,14 @@
         label = "TAP_DANCE_0";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
-        bindings = <&kp F14>, <&kp PG_DN>;
+        bindings = <&kp LS(LC(F6))>, <&kp PG_DN>;
       };
       td1: tap_dance_1 {
         compatible = "zmk,behavior-tap-dance";
         label = "TAP_DANCE_1";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
-        bindings = <&kp F13>, <&kp PG_UP>;
+        bindings = <&kp LS(LC(F1))>, <&kp PG_UP>, <&kp K_CONTEXT_MENU>;
       };
       td2: tap_dance_macro_asc_and_ycu {
         compatible = "zmk,behavior-tap-dance";
@@ -167,7 +167,7 @@
                                         //                               -----------------------------------------------------           -----------------------------------------------
                                         //                               |               |          |     HOME               |           |     END           |                |        |
                                         //                               |    DELETE     | SPACE/Fn |-------------------------           --------------------|   ENTER/Fn     |  BSPC  |
-                                        //                               |               |          |    F13/PgUp            |           |     F14/Pg Dn     |                |        |
+                                        //                               |               |          | LS(LC(F1))/PgUp/ MENU  |           | LS(LC(F6))/Pg Dn  |                |        |
                                         //                               -----------------------------------------------------           -----------------------------------------------
       bindings = <
         &kp ESC    &kp N1    &kp N2    &kp N3           &kp N4            &kp N5 &tog 1                                                                       &mo MOD &kp N6 &kp N7   &kp N8   &kp N9 &kp N0    &kp BSLH
