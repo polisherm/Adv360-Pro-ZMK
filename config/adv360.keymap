@@ -181,7 +181,7 @@
         &kp TAB    &kp SQT   &kp COMMA &kp DOT          &kp P             &kp Y  &td2                                                                         &none   &kp F  &kp G    &kp C    &kp R  &kp L     &kp MINUS
         &kp LCTRL  &kp A     &kp O     &kp E            &kp U             &kp I  &yct              &kp LCTRL     &kp LALT &kp LGUI &kp RALT                   &none   &kp D  &kp H    &kp T    &kp N  &kp S     &kp FSLH
         &kp LSHFT  &kp SEMI  &kp Q     &kp J            &kp K             &kp X                                  &td3     &kp END                                     &kp B  &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
-        &mo FN     &kp GRAVE &mo MOD   &kp LEFT_BRACKET &kp RIGHT_BRACKET               &kp DELETE &lt FN SPACE  &td1     &td0     &lt FN ENTER &kp BACKSPACE                &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp RCTRL
+        &mo FN     &kp GRAVE &mo MOD   &kp LEFT_BRACKET &kp RIGHT_BRACKET               &kp DELETE &lt FN SPACE  &td1     &td0     &kp D &kp BACKSPACE                &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp RCTRL
       >;
     };
 
