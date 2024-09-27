@@ -1,6 +1,6 @@
-macro_alt+\: macro_alt+\{
+macro_copilot: macro_copilot{
 compatible = "zmk,behavior-macro";
-label = "macro_alt+\";
+label = "macro_copilot";
 #binding-cells = <0>;
 bindings = <&kp LALT>, <&kp INTERNATIONAL_1>;
 };
@@ -33,12 +33,6 @@ compatible = "zmk,behavior-macro";
 label = "macro_brackets";
 #binding-cells = <0>;
 bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
-};
-macro_kinesis: macro_kinesis{
-compatible = "zmk,behavior-macro";
-label = "macro_kinesis";
-#binding-cells = <0>;
-bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
 };
 macro_kinesis: macro_kinesis{
 compatible = "zmk,behavior-macro";
