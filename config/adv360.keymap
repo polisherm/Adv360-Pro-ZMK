@@ -32,6 +32,12 @@
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
+    td0: copy_and_paste {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp LC(C)>, <&kp LC(V)>;
+    };
   };
 
     keymap {
