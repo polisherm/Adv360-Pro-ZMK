@@ -82,9 +82,8 @@
     &kp TAB  &kp INTERNATIONAL_1  &kp COMMA         &kp PERIOD            &kp P   &kp Y            &kp PRINTSCREEN                                                                                              &tog 4   &kp F     &kp G     &kp C   &kp R      &kp L  &kp LEFT_BRACKET
   &kp LCTRL                &kp A      &kp O              &kp E            &kp U   &kp I                      &td0    &kp LCTRL             &kp LALT                             &kp LGUI     &kp RALT          &none   &kp D     &kp H     &kp T   &kp N      &kp S          &kp FSLH
   &kp LSHFT        &kp SEMICOLON      &kp Q              &kp J            &kp K   &kp X                                                     &kp HOME                              &kp END                               &kp B     &kp M     &kp W   &kp V      &kp Z         &kp RSHFT
-      &mo 2     &kp SINGLE_QUOTE   &kp INT3  &kp RIGHT_BRACKET  &kp NON_US_HASH                            &kp DEL  &mt LSHIFT SPACE  &kp INTERNATIONAL_5                  &kp INTERNATIONAL_4  &lt 2 ENTER  &kp BACKSPACE          &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT             &mo 2
+      &mo 2     &kp SINGLE_QUOTE   &kp INT3  &kp RIGHT_BRACKET  &kp NON_US_HASH                            &kp DEL  &lt 2 SPACE  &kp INTERNATIONAL_5                  &kp INTERNATIONAL_4  &mt LSHIFT ENTER  &kp BACKSPACE          &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT             &mo 2
             >;
         };
-
     };
 };
