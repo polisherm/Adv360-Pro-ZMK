@@ -16,6 +16,10 @@
     #include "macros.dtsi"
     #include "version.dtsi"
 
+    &lt {
+        quick_tap_ms = <200>;
+    };
+
     hm: homerow_mods {
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS";
@@ -38,10 +42,6 @@
         tapping-term-ms = <150>;
         bindings = <&lt 2 SPACE>, <&kp SPACE>;
     };
-  };
-
-  &lt {
-      quick_tap_ms = <200>;
   };
 
 // OS設定でJISレイアウトに設定されている場合記号はZMKの定義通りに出力されないことがある。
