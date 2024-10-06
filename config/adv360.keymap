@@ -11,8 +11,8 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 
-// Spaceの連続入力をしたいケースがあるため追加。
-// 200ms以内に2回タップするとSpaceの入力が有効になる。
+// Spaceなどの連続入力をしたいケースがあるため追加。
+// 200ms以内に2回タップするとlayer-tapにおける通常キー（レイヤーキー以外）の入力が有効になる。
 &lt {
     quick_tap_ms = <200>;
 };
