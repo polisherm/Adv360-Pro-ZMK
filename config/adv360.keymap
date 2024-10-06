@@ -34,8 +34,8 @@
     td1: fn_space {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&lt 1 SPACE>, <&kp SPACE>;
+        tapping-term-ms = <100>;
+        bindings = <&lt 2 SPACE>, <&kp SPACE>;
     };
   };
 
