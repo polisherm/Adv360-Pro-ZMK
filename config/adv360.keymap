@@ -32,11 +32,11 @@
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
-    td0: copy_and_paste {
+    td0: select_all_copy_and_paste {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
-        bindings = <&kp LC(C)>, <&kp LC(V)>;
+        bindings = <&sac>, <&kp LC(V)>;
     };
     // Spaceの長押しをしたいケースがあるためtap-danceで定義
     td1: fn_space {
@@ -45,6 +45,20 @@
         tapping-term-ms = <150>;
         bindings = <&lt 2 SPACE>, <&kp SPACE>;
     };
+  };
+
+  macros {
+    sac: select_all_and_copy {
+      label = "select_all_and_copy";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings
+          = <&macro_press &kp LCTRL>
+          , <&macro_tap &kp A>
+          , <&macro_tap &kp C>
+          , <&macro_release &kp LCTRL>
+          ;
+    }
   };
 
 // OS設定でJISレイアウトに設定されている場合記号はZMKの定義通りに出力されないことがある。
