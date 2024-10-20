@@ -50,13 +50,13 @@
         #binding-cells = <0>;
         tapping-term-ms = <150>;
         bindings = <&kp HOME>, <&kp PG_UP>;
-    }
+    };
     td3: end_pgdn {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <150>;
         bindings = <&kp END>, <&kp PG_DN>;
-    }
+    };
   };
 
   macros {
@@ -70,7 +70,7 @@
           , <&macro_tap &kp C>
           , <&macro_release &kp LCTRL>
           ;
-    }
+    };
   };
 
 // OS設定でJISレイアウトに設定されている場合記号はZMKの定義通りに出力されないことがある。
