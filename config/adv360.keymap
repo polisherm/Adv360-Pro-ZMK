@@ -109,24 +109,23 @@
     keymap {
         compatible = "zmk,keymap";
 
-
         default_layer {
+            bindings = <
+                &kp ESCAPE &kp N1           &kp N2     &kp N3             &kp N4          &kp N5        &tog 1                                                                                                           &mo 3      &kp N6    &kp N7    &kp N8   &kp N9  &kp N0    &kp INTERNATIONAL_1
+                &kp TAB    &kp Q            &kp L      &kp U              &kp COMMA       &kp PERIOD    &kp PRINTSCREEN                                                                                                  &none      &kp F     &kp W     &kp R    &kp Y   &kp P     &kp LEFT_BRACKET
+                &kp LCTRL  &kp E            &kp I      &kp A              &kp O           &kp MINUS     &td0            &kp LCTRL   &kp LALT                             &kp LGUI             &kp RALT                   &none      &kp K     &kp T     &kp N    &kp S   &kp H     &mt RCTRL FSLH
+                &kp LSHFT  &kp Z            &kp X      &kp C              &kp V           &kp SEMICOLON                             &td2                                 &td3                                                       &kp G     &kp D     &kp M    &kp J   &kp B     &kp RSHFT
+                &mo 2      &kp SINGLE_QUOTE &kp INT3   &kp RIGHT_BRACKET  &kp NON_US_HASH               &kp DEL         &lt 2 SPACE &kp INTERNATIONAL_5                  &kp INTERNATIONAL_4  &lt 2 ENTER  &kp BACKSPACE                      &kp LEFT  &kp DOWN &kp UP  &kp RIGHT &mo 2
+            >;
+        };
+
+        layer_keypad {
             bindings = <
  &kp ESCAPE               &kp N1     &kp N2             &kp N3           &kp N4  &kp N5                     &tog 1                                                                                                 &mo 3  &kp N6    &kp N7    &kp N8   &kp N9    &kp N0        &kp MINUS
     &kp TAB  &kp INTERNATIONAL_1  &kp COMMA         &kp PERIOD            &kp P   &kp Y            &kp PRINTSCREEN                                                                                                 &none  &kp F     &kp G     &kp C    &kp R     &kp L         &kp LEFT_BRACKET
   &kp LCTRL                &kp A      &kp O              &kp E            &kp U   &kp I                      &td0    &kp LCTRL                &kp LALT                             &kp LGUI     &kp RALT          &none   &kp D     &kp H     &kp T    &kp N     &kp S         &mt RCTRL FSLH
   &kp LSHFT        &kp SEMICOLON      &kp Q              &kp J            &kp K   &kp X                                                        &td2                                &td3                                    &kp B    &kp M     &kp W    &kp V     &kp Z         &kp RSHFT
       &mo 2     &kp SINGLE_QUOTE   &kp INT3  &kp RIGHT_BRACKET  &kp NON_US_HASH                            &kp DEL  &lt 2 SPACE &kp INTERNATIONAL_5                  &kp INTERNATIONAL_4  &lt 2 ENTER  &kp BACKSPACE                &kp LEFT  &kp DOWN &kp UP    &kp RIGHT     &mo 2
-            >;
-        };
-
-        layer_keypad {
-            bindings = <
- &kp GRAVE   &kp N1     &kp N2    &kp N3     &kp N4  &kp N5              &trans                                                                 &mo 3  &kp N6  &kp KP_NUM     &kp N8  &kp KP_DIVIDE  &kp KP_MULTIPLY         &kp MINUS
-   &kp TAB    &kp Q      &kp W     &kp E      &kp R   &kp T               &none                                                                 &none   &kp Y   &kp KP_N7  &kp KP_N8      &kp KP_N9     &kp KP_MINUS  &kp LEFT_BRACKET
-  &kp CAPS    &kp A      &kp S     &kp D      &kp F   &kp G               &none  &kp LCTRL  &kp LALT                   &kp LGUI  &kp RCTRL      &none   &kp H   &kp KP_N4  &kp KP_N5      &kp KP_N6      &kp KP_PLUS  &kp SINGLE_QUOTE
- &kp LSHFT    &kp Z      &kp X     &kp C      &kp V   &kp B                                 &kp HOME                  &kp PG_UP                         &kp N   &kp KP_N1  &kp KP_N2      &kp KP_N3     &kp KP_ENTER         &kp RSHFT
-     &mo 2  &kp ESC  &kp EQUAL  &kp LEFT  &kp RIGHT                    &kp BSPC    &kp DEL   &kp END                  &kp PG_DN  &kp ENTER  &kp KP_N0              &kp UP   &kp DOWN     &kp KP_DOT     &kp KP_ENTER             &mo 2
             >;
         };
 
