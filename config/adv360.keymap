@@ -112,8 +112,8 @@
         default_layer {
             bindings = <
                 &kp ESCAPE &kp N1           &kp N2     &kp N3             &kp N4          &kp N5        &tog 1                                                                                                           &mo 3      &kp N6    &kp N7    &kp N8   &kp N9  &kp N0    &kp INTERNATIONAL_1
-                &kp TAB    &kp Q            &kp L      &kp U              &kp COMMA       &kp PERIOD    &kp PRINTSCREEN                                                                                                  &none      &kp F     &kp W     &kp R    &kp Y   &kp P     &kp LEFT_BRACKET
-                &kp LCTRL  &kp E            &kp I      &kp A              &kp O           &kp MINUS     &td0            &kp LCTRL   &kp LALT                             &kp LGUI             &kp RALT                   &none      &kp K     &kp T     &kp N    &kp S   &kp H     &mt RCTRL FSLH
+                &kp TAB    &kp Q            &kp COMMA  &kp PERIOD         &kp MINUS       &kp L         &kp PRINTSCREEN                                                                                                  &none      &kp F     &kp W     &kp R    &kp Y   &kp P     &kp LEFT_BRACKET
+                &kp LCTRL  &kp E            &kp I      &kp A              &kp O           &kp U         &td0            &kp LCTRL   &kp LALT                             &kp LGUI             &kp RALT                   &none      &kp K     &kp S     &kp T    &kp N   &kp H     &mt RCTRL FSLH
                 &kp LSHFT  &kp Z            &kp X      &kp C              &kp V           &kp SEMICOLON                             &td2                                 &td3                                                       &kp G     &kp D     &kp M    &kp J   &kp B     &kp RSHFT
                 &mo 2      &kp SINGLE_QUOTE &kp INT3   &kp RIGHT_BRACKET  &kp NON_US_HASH               &kp DEL         &lt 2 SPACE &kp INTERNATIONAL_5                  &kp INTERNATIONAL_4  &lt 2 ENTER  &kp BACKSPACE                      &kp LEFT  &kp DOWN &kp UP  &kp RIGHT &mo 2
             >;
