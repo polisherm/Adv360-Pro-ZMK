@@ -42,13 +42,6 @@
         tapping-term-ms = <200>;
         bindings = <&sac>, <&kp LC(V)>;
     };
-    // Spaceの長押しをしたいケースがあるためtap-danceで定義
-    td1: fn_space {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <150>;
-        bindings = <&lt 2 SPACE>, <&kp SPACE>;
-    };
     td2: home_pgup {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
