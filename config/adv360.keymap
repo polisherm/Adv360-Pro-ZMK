@@ -20,7 +20,6 @@
 
 &mt {
     tapping-term-ms = <200>;
-    retro-tap;
 };
 
 / {
