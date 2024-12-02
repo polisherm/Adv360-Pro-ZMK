@@ -102,8 +102,8 @@
   };
 
   // Homerow mods
-  #define _A_SFT &hm_l LSHFT A  // Shift on little finger. This setting is for `SKK`.
-  #define _S_SFT &hm_r LSHFT S  // Shift on little finger. This setting is for `SKK`.
+  #define _PERIOD_SFT &hm_l LSHFT PERIOD  // Shift on middle finger. This setting is for `SKK`.
+  #define _C_SFT &hm_r LSHFT C  // Shift on middle finger. This setting is for `SKK`.
 
   macros {
     sac: select_all_and_copy {
@@ -153,8 +153,8 @@
         default_layer {
             bindings = <
                 &kp ESCAPE &kp N1              &kp N2    &kp N3            &kp N4          &kp N5 &tog 1                                                                           &mo 3         &kp N6 &kp N7   &kp N8   &kp N9 &kp N0    &kp MINUS
-                &kp TAB    &kp INTERNATIONAL_1 &kp COMMA &kp PERIOD        &kp P           &kp Y  &kp PRINTSCREEN                                                                  &none         &kp F  &kp G    &kp C    &kp R  &kp L     &kp LEFT_BRACKET
-                &kp LCTRL  _A_SFT              &kp O     &kp E             &kp U           &kp I  &td0            &kp LCTRL   &kp LALT            &kp LGUI            &kp RALT     &none         &kp D  &kp H    &kp T    &kp N  _S_SFT    &mt RCTRL FSLH
+                &kp TAB    &kp INTERNATIONAL_1 &kp COMMA _PERIOD_SFT       &kp P           &kp Y  &kp PRINTSCREEN                                                                  &none         &kp F  &kp G    _C_SFT   &kp R  &kp L     &kp LEFT_BRACKET
+                &kp LCTRL  &kp A               &kp O     &kp E             &kp U           &kp I  &td0            &kp LCTRL   &kp LALT            &kp LGUI            &kp RALT     &none         &kp D  &kp H    &kp T    &kp N  &kp S     &mt RCTRL FSLH
                 &kp LSHFT  &kp SEMICOLON       &kp Q     &kp J             &kp K           &kp X                              &td2                &td3                                           &kp B  &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
                 &mo 2      &kp SINGLE_QUOTE    &kp INT3  &kp RIGHT_BRACKET &kp NON_US_HASH        &kp DEL         &lt 2 SPACE &kp INTERNATIONAL_5 &kp INTERNATIONAL_4 &lt 2 ENTER  &kp BACKSPACE        &kp LEFT &kp DOWN &kp UP &kp RIGHT &mo 2
             >;
