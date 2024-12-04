@@ -61,9 +61,9 @@
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS_LEFT";
         #binding-cells = <2>;
-        tapping-term-ms = <150>;
+        tapping-term-ms = <175>;
         quick_tap_ms = <175>;
-        flavor = "tap-unless-interrupted";  // tapping-term-ms 以内に他のキーが押された場合のみホールドタップを有効にする。それ以外はタップが有効になる。
+        flavor = "balanced";
         bindings = <&kp>, <&kp>;
         // 右半分と親指クラスターのみ、ホールドタップを有効にする。
         hold-trigger-key-positions = <KEYS_RIGHT THUMBS>;
@@ -73,9 +73,9 @@
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS_RIGHT";
         #binding-cells = <2>;
-        tapping-term-ms = <150>;
+        tapping-term-ms = <175>;
         quick_tap_ms = <175>;
-        flavor = "tap-unless-interrupted";
+        flavor = "balanced";
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = <KEYS_LEFT THUMBS>;
     };
