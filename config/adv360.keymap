@@ -63,7 +63,7 @@
         #binding-cells = <2>;
         tapping-term-ms = <200>;
         quick_tap_ms = <175>;
-        flavor = "balanced";
+        flavor = "tap-unless-interrupted";  // tapping-term-ms 以内に他のキーが押された場合のみホールドタップを有効にする。それ以外はタップが有効になる。
         bindings = <&kp>, <&kp>;
         // 右半分と親指クラスターのみ、ホールドタップを有効にする。
         hold-trigger-key-positions = <KEYS_RIGHT THUMBS>;
@@ -75,7 +75,7 @@
         #binding-cells = <2>;
         tapping-term-ms = <200>;
         quick_tap_ms = <175>;
-        flavor = "balanced";
+        flavor = "tap-unless-interrupted";
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = <KEYS_LEFT THUMBS>;
     };
