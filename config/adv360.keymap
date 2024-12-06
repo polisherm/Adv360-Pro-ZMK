@@ -105,24 +105,14 @@
     };
 
     // hold-tap functions
-    sands_l: space_and_shift_left {
+    SandS: space_and_shift {
         compatible = "zmk,behavior-hold-tap";
-        label = "SPACE_AND_SHIFT_LEFT";
+        label = "SPACE_AND_SHIFT";  // 分かりやすいようにこの名前にしているがSpace + Shift以外も可能。。
         #binding-cells = <2>;
         tapping-term-ms = <200>;
         quick_tap_ms = <200>;
         flavor = "hold-preferred";
-        bindings = <&kp LSHFT>, <&kp SPACE>;
-        hold-trigger-key-positions = <KEYS_LEFT KEYS_RIGHT>;  // 親指クラスターには適用しない
-    };
-    sands_r: enter_and_shift_right {
-        compatible = "zmk,behavior-hold-tap";
-        label = "ENTER_AND_SHIFT_RIGHT";
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick_tap_ms = <200>;
-        flavor = "hold-preferred";
-        bindings = <&kp RSHFT>, <&kp ENTER>;
+        bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = <KEYS_LEFT KEYS_RIGHT>;  // 親指クラスターには適用しない
     };
   };
@@ -179,11 +169,11 @@
 
         default_layer {
             bindings = <
-                &kp ESCAPE &kp N1              &kp N2    &kp N3            &kp N4          &kp N5 &tog 1                                                                                   &mo 3           &kp N6 &kp N7   &kp N8   &kp N9 &kp N0    &kp MINUS
-                &kp TAB    &kp INTERNATIONAL_1 &kp COMMA &kp PERIOD        &kp P           &kp Y  &kp PRINTSCREEN                                                                          &none           &kp F  &kp G    &kp C    &kp R  &kp L     &kp LEFT_BRACKET
-                &kp LCTRL  &kp A               &kp O     &kp E             &kp U           &kp I  &td0            &kp LCTRL       &kp LALT            &kp LGUI            &kp RALT         &none           &kp D  &kp H    &kp T    &kp N  &kp S     &kp FSLH
-                &kp LSHFT  &kp SEMICOLON       &kp Q     &kp J             &kp K           &kp X                                  &td2                &td3                                                 &kp B  &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
-                &mo 2      &kp SINGLE_QUOTE    &kp INT3  &kp RIGHT_BRACKET &kp NON_US_HASH        &lt 2 DEL       &sands_l        &kp INTERNATIONAL_5 &kp INTERNATIONAL_4 &sands_r         &lt 2 BACKSPACE        &kp LEFT &kp DOWN &kp UP &kp RIGHT &mo 2
+                &kp ESCAPE &kp N1              &kp N2    &kp N3            &kp N4          &kp N5 &tog 1                                                                                                &mo 3           &kp N6 &kp N7   &kp N8   &kp N9 &kp N0    &kp MINUS
+                &kp TAB    &kp INTERNATIONAL_1 &kp COMMA &kp PERIOD        &kp P           &kp Y  &kp PRINTSCREEN                                                                                       &none           &kp F  &kp G    &kp C    &kp R  &kp L     &kp LEFT_BRACKET
+                &kp LCTRL  &kp A               &kp O     &kp E             &kp U           &kp I  &td0            &kp LCTRL          &kp LALT            &kp LGUI            &kp RALT                   &none           &kp D  &kp H    &kp T    &kp N  &kp S     &kp FSLH
+                &kp LSHFT  &kp SEMICOLON       &kp Q     &kp J             &kp K           &kp X                                     &td2                &td3                                                           &kp B  &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
+                &mo 2      &kp SINGLE_QUOTE    &kp INT3  &kp RIGHT_BRACKET &kp NON_US_HASH        &lt 2 DEL       &SandS LSHFT SPACE &kp INTERNATIONAL_5 &kp INTERNATIONAL_4 &SandS RSHFT ENTER         &lt 2 BACKSPACE        &kp LEFT &kp DOWN &kp UP &kp RIGHT &mo 2
             >;
         };
 
