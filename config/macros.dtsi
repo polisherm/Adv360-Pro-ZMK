@@ -11,6 +11,50 @@ sac: select_all_and_copy {
       ;
 };
 
+undo: undo {
+  label = "Undo";
+  compatible = "zmk,behavior-macro";
+  #binding-cells = <0>;
+  bindings
+      = <&macro_press &kp LCTRL>
+      , <&macro_tap &kp Z>
+      , <&macro_release &kp LCTRL>
+      ;
+};
+
+cut: cut {
+  label = "Cut";
+  compatible = "zmk,behavior-macro";
+  #binding-cells = <0>;
+  bindings
+      = <&macro_press &kp LCTRL>
+      , <&macro_tap &kp X>
+      , <&macro_release &kp LCTRL>
+      ;
+};
+
+copy: copy {
+  label = "Copy";
+  compatible = "zmk,behavior-macro";
+  #binding-cells = <0>;
+  bindings
+      = <&macro_press &kp LCTRL>
+      , <&macro_tap &kp C>
+      , <&macro_release &kp LCTRL>
+      ;
+};
+
+paste: paste {
+  label = "Paste";
+  compatible = "zmk,behavior-macro";
+  #binding-cells = <0>;
+  bindings
+      = <&macro_press &kp LCTRL>
+      , <&macro_tap &kp V>
+      , <&macro_release &kp LCTRL>
+      ; 
+};
+
 // defaults
 macro_quotes: macro_quotes{
 compatible = "zmk,behavior-macro";
