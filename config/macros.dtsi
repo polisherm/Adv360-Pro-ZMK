@@ -55,6 +55,30 @@ paste: paste {
       ; 
 };
 
+select_all: select_all {
+  label = "Select All";
+  compatible = "zmk,behavior-macro";
+  #binding-cells = <0>;
+  bindings
+      = <&macro_press &kp LCTRL>
+      , <&macro_tap &kp A>
+      , <&macro_release &kp LCTRL>
+      ;
+};
+
+// 「・」を入力してからペーストする。
+pwb: paste_with_bullets {
+  label = "Paste with Bullets";
+  compatible = "zmk,behavior-macro";
+  #binding-cells = <0>;
+  bindings
+      = <&macro_tap &kp FSLH>
+      , <&macro_press &kp LCTRL>
+      , <&macro_tap &kp V>
+      , <&macro_release &kp LCTRL>
+      ;
+};
+
 // defaults
 macro_quotes: macro_quotes{
 compatible = "zmk,behavior-macro";

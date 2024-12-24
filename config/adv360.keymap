@@ -110,6 +110,12 @@
         tapping-term-ms = <150>;
         bindings = <&kp END>, <&kp PG_DN>;
     };
+    td4: simple_paste_or_with_bullets {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&paste>, <&pwb>;
+    };
 
     // hold-tap functions
     SandS: space_and_shift {
@@ -218,8 +224,8 @@
             bindings = <
                 &none         &none         &none         &none         &none         &none            &none                                                &none                  &none       &none       &none       &none   &none   &none
                 &none         &none         &none         &none         &none         &none            &none                                                &none                  &none       &none       &none       &none   &none   &none
-                &none         &none         &none         &none         &none         &none            &none       &none   &none     &none       &none      &none                  &none       &none       &none       &none   &none   &none
-                &none         &undo         &cut          &copy         &paste        &none                                &none     &none                                         &none       &none       &none       &none   &none   &none
+                &none         &select_all   &none         &none         &none         &none            &none       &none   &none     &none       &none      &none                  &none       &none       &none       &none   &none   &none
+                &none         &undo         &cut          &copy         &td4          &none                                &none     &none                                         &none       &none       &none       &none   &none   &none
                 &none         &none         &none         &none         &none                          &none       &none   &none     &none       &none      &none                              &none       &none       &none   &none   &none
             >;
         };
