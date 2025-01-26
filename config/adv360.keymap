@@ -110,7 +110,7 @@
         tapping-term-ms = <150>;
         bindings = <&kp END>, <&kp PG_DN>;
     };
-    td4: simple_paste_or_with_bullets {
+    td4: simple_paste_or_with_bullets_and_newline {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
