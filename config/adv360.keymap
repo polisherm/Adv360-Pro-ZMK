@@ -100,56 +100,56 @@
           tapping-term-ms = <200>;
           bindings = <&sac>, <&kp LC(V)>;
       };
-    td2: home_pgup {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <150>;
-        bindings = <&kp HOME>, <&kp PG_UP>;
-    };
-    td3: end_pgdn {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <150>;
-        bindings = <&kp END>, <&kp PG_DN>;
-    };
-    td4: simple_paste_or_with_bullets_and_newline {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&paste>, <&pwb>;
+      td2: home_pgup {
+          compatible = "zmk,behavior-tap-dance";
+          #binding-cells = <0>;
+          tapping-term-ms = <150>;
+          bindings = <&kp HOME>, <&kp PG_UP>;
+      };
+      td3: end_pgdn {
+          compatible = "zmk,behavior-tap-dance";
+          #binding-cells = <0>;
+          tapping-term-ms = <150>;
+          bindings = <&kp END>, <&kp PG_DN>;
+      };
+      td4: simple_paste_or_with_bullets_and_newline {
+          compatible = "zmk,behavior-tap-dance";
+          #binding-cells = <0>;
+          tapping-term-ms = <200>;
+          bindings = <&paste>, <&pwb>;
+      };
+
+      // hold-tap functions
+      SandS: space_and_shift {
+          compatible = "zmk,behavior-hold-tap";
+          label = "SPACE_AND_SHIFT";  // 分かりやすいようにこの名前にしているがSpace + Shift以外も可能。。
+          #binding-cells = <2>;
+          tapping-term-ms = <200>;
+          quick_tap_ms = <200>;
+          flavor = "hold-preferred";
+          bindings = <&kp>, <&kp>;
+          hold-trigger-key-positions = <KEYS_LEFT KEYS_RIGHT>;  // 親指クラスターには適用しない
+      };
     };
 
-    // hold-tap functions
-    SandS: space_and_shift {
-        compatible = "zmk,behavior-hold-tap";
-        label = "SPACE_AND_SHIFT";  // 分かりやすいようにこの名前にしているがSpace + Shift以外も可能。。
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick_tap_ms = <200>;
-        flavor = "hold-preferred";
-        bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = <KEYS_LEFT KEYS_RIGHT>;  // 親指クラスターには適用しない
+    // Homerow mods
+    #define _PERIOD_SFT &hm_l LSHFT PERIOD  // Shift on middle finger. This setting is for `SKK`.
+    #define _C_SFT &hm_r RSHFT C
+    #define _A_SFT &hm_l LSHFT A
+    #define _S_SFT &hm_r RSHFT S
+
+    macros {
+      // Moved into macros.dtsi.
     };
-  };
 
-  // Homerow mods
-  #define _PERIOD_SFT &hm_l LSHFT PERIOD  // Shift on middle finger. This setting is for `SKK`.
-  #define _C_SFT &hm_r RSHFT C
-  #define _A_SFT &hm_l LSHFT A
-  #define _S_SFT &hm_r RSHFT S
-
-  macros {
-    // Moved into macros.dtsi.
-  };
-
-  //combos {
-    //  compatible = "zmk,combos";
-    //  combo_esc {
-    //    timeout-ms = <50>;
-    //      key-positions = <0 1>;
-    //      bindings = <&kp ESC>;
-    //  };
-  //};
+    // combos {
+    //    compatible = "zmk,combos";
+    //    combo_esc {
+    //        timeout-ms = <50>;
+    //        key-positions = <0 1>;
+    //        bindings = <&kp ESC>;
+    //    };
+    // };
 
 // OS設定でJISレイアウトに設定されている場合、記号はZMKの定義通りに出力されないことがある。
 // 以下定義と実際の出力の対応関係のメモ。
@@ -222,11 +222,11 @@
           display-name = "Mod";
 
             bindings = <
-                &none         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &none                                                &trans                 &none       &none       &none       &none   &none   &none
-                &none         &none         &none         &none         &none         &none            &bootloader                                          &bootloader            &none       &none       &none       &none   &none   &none
-                &none         &none         &none         &none         &none         &none            &none       &none   &none     &bt BT_CLR  &none      &rgb_ug RGB_MEFS_CMD 5 &none       &none       &none       &none   &none   &none
-                &none         &none         &none         &none         &macro_ver    &none                                &none     &none                                         &none       &none       &none       &none   &none   &none
-                &none         &none         &none         &none         &none                          &none       &none   &none     &none       &bl BL_TOG &rgb_ug RGB_TOG                    &bl BL_INC  &bl BL_DEC  &none   &none   &none
+                &studio_unlock &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &none                                                &trans                 &none       &none       &none       &none   &none   &none
+                &none          &none         &none         &none         &none         &none            &bootloader                                          &bootloader            &none       &none       &none       &none   &none   &none
+                &none          &none         &none         &none         &none         &none            &none       &none   &none     &bt BT_CLR  &none      &rgb_ug RGB_MEFS_CMD 5 &none       &none       &none       &none   &none   &none
+                &none          &none         &none         &none         &macro_ver    &none                                &none     &none                                         &none       &none       &none       &none   &none   &none
+                &none          &none         &none         &none         &none                          &none       &none   &none     &none       &bl BL_TOG &rgb_ug RGB_TOG                    &bl BL_INC  &bl BL_DEC  &none   &none   &none
             >;
         };
 
