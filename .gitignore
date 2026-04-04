@@ -1,1 +1,5 @@
 /firmware/*.uf2
+
+# IDE / Editor
+.idea/
+*.code-workspace
