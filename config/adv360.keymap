@@ -47,7 +47,7 @@
 // 200ms以内に2回タップするとlayer-tapにおける通常キー（レイヤーキー以外）の入力が有効になる。
 &lt {
     tapping-term-ms = <200>;
-    quick_tap_ms = <175>;
+    quick-tap-ms = <175>;
 };
 
 &mt {
@@ -60,22 +60,12 @@
       #include "version.dtsi"
 
       // homerow mods settings
-      hm: homerow_mods {
-          compatible = "zmk,behavior-hold-tap";
-          label = "HOMEROW_MODS";
-          #binding-cells = <2>;
-          tapping-term-ms = <200>;
-          quick_tap_ms = <175>;
-          flavor = "tap-preferred";
-          bindings = <&kp>, <&kp>;
-      };
-
       hm_l: homerow_mods_left {
           compatible = "zmk,behavior-hold-tap";
           label = "HOMEROW_MODS_LEFT";
           #binding-cells = <2>;
           tapping-term-ms = <175>;
-          quick_tap_ms = <175>;
+          quick-tap-ms = <175>;
           flavor = "balanced";
           bindings = <&kp>, <&kp>;
           // 右半分と親指クラスターのみ、ホールドタップを有効にする。
@@ -87,32 +77,32 @@
           label = "HOMEROW_MODS_RIGHT";
           #binding-cells = <2>;
           tapping-term-ms = <175>;
-          quick_tap_ms = <175>;
+          quick-tap-ms = <175>;
           flavor = "balanced";
           bindings = <&kp>, <&kp>;
           hold-trigger-key-positions = <KEYS_LEFT THUMBS>;
       };
 
       // tap-dance functions
-      td0: select_all_copy_and_paste {
+      td_sac_paste: select_all_copy_and_paste {
           compatible = "zmk,behavior-tap-dance";
           #binding-cells = <0>;
           tapping-term-ms = <200>;
           bindings = <&sac>, <&kp LC(V)>;
       };
-      td2: home_pgup {
+      td_home_pgup: home_pgup {
           compatible = "zmk,behavior-tap-dance";
           #binding-cells = <0>;
           tapping-term-ms = <150>;
           bindings = <&kp HOME>, <&kp PG_UP>;
       };
-      td3: end_pgdn {
+      td_end_pgdn: end_pgdn {
           compatible = "zmk,behavior-tap-dance";
           #binding-cells = <0>;
           tapping-term-ms = <150>;
           bindings = <&kp END>, <&kp PG_DN>;
       };
-      td4: simple_paste_or_with_bullets_and_newline {
+      td_paste_pwb: simple_paste_or_with_bullets_and_newline {
           compatible = "zmk,behavior-tap-dance";
           #binding-cells = <0>;
           tapping-term-ms = <200>;
@@ -125,18 +115,12 @@
           label = "SPACE_AND_SHIFT";  // 分かりやすいようにこの名前にしているがSpace + Shift以外も可能。。
           #binding-cells = <2>;
           tapping-term-ms = <200>;
-          quick_tap_ms = <200>;
+          quick-tap-ms = <200>;
           flavor = "hold-preferred";
           bindings = <&kp>, <&kp>;
           hold-trigger-key-positions = <KEYS_LEFT KEYS_RIGHT>;  // 親指クラスターには適用しない
       };
     };
-
-    // Homerow mods
-    #define _PERIOD_SFT &hm_l LSHFT PERIOD  // Shift on middle finger. This setting is for `SKK`.
-    #define _C_SFT &hm_r RSHFT C
-    #define _A_SFT &hm_l LSHFT A
-    #define _S_SFT &hm_r RSHFT S
 
     macros {
       // Moved into macros.dtsi.
@@ -186,11 +170,11 @@
           display-name = "Base";
 
             bindings = <
-                &kp ESCAPE  &kp N1              &kp N2    &kp N3            &kp N4          &kp N5 &tog KEYPAD                                                                                           &mo MOD         &kp N6 &kp N7   &kp N8   &kp N9 &kp N0    &kp MINUS
-                &kp TAB     &kp INTERNATIONAL_1 &kp COMMA &kp PERIOD        &kp P           &kp Y  &kp PRINTSCREEN                                                                                       &none           &kp F  &kp G    &kp C    &kp R  &kp L     &kp LEFT_BRACKET
-                &kp LCTRL   &kp A               &kp O     &kp E             &kp U           &kp I  &td0            &kp LCTRL          &kp LALT            &kp LGUI            &kp RALT                   &none           &kp D  &kp H    &kp T    &kp N  &kp S     &kp FSLH
-                &kp LSHFT   &kp SEMICOLON       &kp Q     &kp J             &kp K           &kp X                                     &td2                &td3                                                           &kp B  &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
-                &mo COMMAND &kp SINGLE_QUOTE    &kp INT3  &kp RIGHT_BRACKET &kp NON_US_HASH        &lt FN DEL      &SandS LSHFT SPACE &kp INTERNATIONAL_5 &kp INTERNATIONAL_4 &SandS RSHFT ENTER         &lt FN BACKSPACE       &kp LEFT &kp DOWN &kp UP &kp RIGHT &mo FN
+                &kp ESCAPE  &kp N1              &kp N2    &kp N3            &kp N4          &kp N5 &tog KEYPAD                                                                                   &mo MOD          &kp N6   &kp N7   &kp N8   &kp N9 &kp N0    &kp MINUS
+                &kp TAB     &kp INTERNATIONAL_1 &kp COMMA &kp PERIOD        &kp P           &kp Y  &kp PRINTSCREEN                                                                               &none            &kp F    &kp D    &kp C    &kp G  &kp L     &kp LEFT_BRACKET
+                &kp LCTRL   &kp A               &kp O     &kp E             &kp U           &kp I  &td_sac_paste   &kp LCTRL          &kp LALT            &kp LGUI            &kp RALT           &none            &kp H    &kp R    &kp T    &kp N  &kp S     &kp FSLH
+                &kp LSHFT   &kp SEMICOLON       &kp Q     &kp J             &kp K           &kp X                                     &td_home_pgup       &td_end_pgdn                                            &kp B    &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
+                &mo COMMAND &kp SINGLE_QUOTE    &kp INT3  &kp RIGHT_BRACKET &kp NON_US_HASH        &lt FN DEL      &SandS LSHFT SPACE &kp INTERNATIONAL_5 &kp INTERNATIONAL_4 &SandS RSHFT ENTER &lt FN BACKSPACE          &kp LEFT &kp DOWN &kp UP &kp RIGHT &mo FN
             >;
         };
 
@@ -202,7 +186,7 @@
                 &kp TAB     &kp Q   &kp W     &kp E    &kp R     &kp T  &none                                            &none     &kp Y   &kp KP_N7  &kp KP_N8 &kp KP_N9     &kp KP_MINUS    &kp LEFT_BRACKET
                 &kp CAPS    &kp A   &kp S     &kp D    &kp F     &kp G  &none    &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL  &none     &kp H   &kp KP_N4  &kp KP_N5 &kp KP_N6     &kp KP_PLUS     &kp SINGLE_QUOTE
                 &kp LSHFT   &kp Z   &kp X     &kp C    &kp V     &kp B                     &kp HOME &kp PG_UP                      &kp N   &kp KP_N1  &kp KP_N2 &kp KP_N3     &kp KP_ENTER    &kp RSHFT
-                &mo COMMAND &kp ESC &kp EQUAL &kp LEFT &kp RIGHT        &kp BSPC &kp DEL   &kp END  &kp PG_DN  &kp ENTER &kp KP_N0         &kp UP     &kp DOWN  &kp KP_DOT    &kp KP_ENTER    &mo FN
+                &mo COMMAND &kp ESC &kp EQUAL &kp LEFT &kp RIGHT        &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER  &kp KP_N0         &kp UP     &kp DOWN  &kp KP_DOT    &kp KP_ENTER    &mo FN
             >;
         };
 
@@ -231,12 +215,14 @@
         };
 
         layer_command {
+          display-name = "Cmd";
+
             bindings = <
-                &none         &none         &none         &none         &none         &none            &none                                                &none                  &none       &none       &none       &none   &none   &none
-                &none         &none         &none         &none         &none         &none            &none                                                &none                  &none       &none       &none       &none   &none   &none
-                &none         &select_all   &none         &none         &none         &none            &none       &none   &none     &none       &none      &none                  &none       &none       &none       &none   &none   &none
-                &none         &undo         &cut          &copy         &td4          &none                                &none     &none                                         &none       &none       &none       &none   &none   &none
-                &none         &none         &none         &none         &none                          &none       &none   &none     &none       &none      &none                              &none       &none       &none   &none   &none
+                &none    &none          &none    &none    &none            &none  &none                                        &none    &none    &none    &none    &none    &none    &none
+                &none    &none          &none    &none    &none            &none  &none                                        &none    &none    &none    &none    &none    &none    &none
+                &none    &select_all    &none    &none    &none            &none  &none    &none    &none    &none    &none    &none    &none    &none    &none    &none    &none    &none
+                &none    &undo          &cut     &copy    &td_paste_pwb    &none                    &none    &none                      &none    &none    &none    &none    &none    &none
+                &none    &none          &none    &none    &none                   &none    &none    &none    &none    &none    &none             &none    &none    &none    &none    &none
             >;
         };
 
