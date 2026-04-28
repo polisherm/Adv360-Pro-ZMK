@@ -171,8 +171,8 @@
 
             bindings = <
                 &kp ESCAPE  &kp N1              &kp N2    &kp N3            &kp N4          &kp N5 &tog KEYPAD                                                                                   &mo MOD          &kp N6   &kp N7   &kp N8   &kp N9 &kp N0    &kp MINUS
-                &kp TAB     &kp INTERNATIONAL_1 &kp COMMA &kp PERIOD        &kp P           &kp Y  &kp PRINTSCREEN                                                                               &none            &kp F    &kp D    &kp C    &kp G  &kp L     &kp LEFT_BRACKET
-                &kp LCTRL   &kp A               &kp O     &kp E             &kp U           &kp I  &td_sac_paste   &kp LCTRL          &kp LALT            &kp LGUI            &kp RALT           &none            &kp H    &kp R    &kp T    &kp N  &kp S     &kp FSLH
+                &kp TAB     &kp INTERNATIONAL_1 &kp COMMA &kp PERIOD        &kp P           &kp Y  &kp PRINTSCREEN                                                                               &none            &kp F    &kp G    &kp C    &kp R  &kp L     &kp LEFT_BRACKET
+                &kp LCTRL   &kp A               &kp O     &kp E             &kp U           &kp I  &td_sac_paste   &kp LCTRL          &kp LALT            &kp LGUI            &kp RALT           &none            &kp D    &kp H    &kp T    &kp N  &kp S     &kp FSLH
                 &kp LSHFT   &kp SEMICOLON       &kp Q     &kp J             &kp K           &kp X                                     &td_home_pgup       &td_end_pgdn                                            &kp B    &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
                 &mo COMMAND &kp SINGLE_QUOTE    &kp INT3  &kp RIGHT_BRACKET &kp NON_US_HASH        &lt FN DEL      &SandS LSHFT SPACE &kp INTERNATIONAL_5 &kp INTERNATIONAL_4 &SandS RSHFT ENTER &lt FN BACKSPACE          &kp LEFT &kp DOWN &kp UP &kp RIGHT &mo FN
             >;
