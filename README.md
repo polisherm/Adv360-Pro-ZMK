@@ -2,7 +2,7 @@
 
 ## My Keymap
 
-![my_keymap](assets/my_keymap.png)
+![my_keymap](keymap-drawer/adv360.svg)
 
 ## Modifying the keymap
 

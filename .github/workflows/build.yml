@@ -1,4 +1,17 @@
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    paths-ignore:
+      - 'keymap-drawer/**'
+      - '**.md'
+      - 'assets/**'
+      - '.github/workflows/draw-keymaps.yml'
+  pull_request:
+    paths-ignore:
+      - 'keymap-drawer/**'
+      - '**.md'
+      - 'assets/**'
+      - '.github/workflows/draw-keymaps.yml'
+  workflow_dispatch:
 
 name: Build
 
