@@ -193,7 +193,7 @@ path.combo {
 <g transform="translate(108, 108)" class="key keypos-15">
 <rect rx="6" ry="6" x="-29" y="-29" width="58" height="58" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">INTERNATIONAL</tspan><tspan x="0" dy="1.2em">1</tspan>
+<tspan x="0" dy="-0.6em" style="font-size: 77%">INTERNATIONAL</tspan><tspan x="0" dy="1.2em" style="font-size: 77%">1</tspan>
 </text>
 </g>
 <g transform="translate(170, 93)" class="key keypos-16">
@@ -214,7 +214,7 @@ path.combo {
 </g>
 <g transform="translate(418, 93)" class="key keypos-20">
 <rect rx="6" ry="6" x="-29" y="-29" width="58" height="58" class="key"/>
-<text x="0" y="0" class="key tap">PRINTSCREEN</text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 91%">PRINTSCREEN</tspan></text>
 </g>
 <g transform="translate(698, 93)" class="key keypos-21">
 <rect rx="6" ry="6" x="-29" y="-29" width="58" height="58" class="key"/>
@@ -269,7 +269,7 @@ path.combo {
 </g>
 <g transform="translate(418, 155)" class="key keypos-34">
 <rect rx="6" ry="6" x="-29" y="-29" width="58" height="58" class="key"/>
-<text x="0" y="0" class="key tap">&amp;td_sac_paste</text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 77%">&amp;td_sac_paste</tspan></text>
 </g>
 <g transform="translate(437, 310) rotate(15.0)" class="key keypos-35">
 <rect rx="6" ry="6" x="-29" y="-29" width="58" height="58" class="key"/>
@@ -340,11 +340,11 @@ path.combo {
 </g>
 <g transform="translate(481, 386) rotate(15.0)" class="key keypos-52">
 <rect rx="6" ry="6" x="-29" y="-29" width="58" height="58" class="key"/>
-<text x="0" y="0" class="key tap">&amp;td_home_pgup</text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 77%">&amp;td_home_pgup</tspan></text>
 </g>
 <g transform="translate(635, 386) rotate(-15.0)" class="key keypos-53">
 <rect rx="6" ry="6" x="-29" y="-29" width="58" height="58" class="key"/>
-<text x="0" y="0" class="key tap">&amp;td_end_pgdn</text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 83%">&amp;td_end_pgdn</tspan></text>
 </g>
 <g transform="translate(760, 217)" class="key keypos-54">
 <rect rx="6" ry="6" x="-29" y="-29" width="58" height="58" class="key"/>
@@ -405,13 +405,13 @@ path.combo {
 <g transform="translate(465, 446) rotate(15.0)" class="key keypos-67">
 <rect rx="6" ry="6" x="-29" y="-29" width="58" height="58" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">INTERNATIONAL</tspan><tspan x="0" dy="1.2em">5</tspan>
+<tspan x="0" dy="-0.6em" style="font-size: 77%">INTERNATIONAL</tspan><tspan x="0" dy="1.2em" style="font-size: 77%">5</tspan>
 </text>
 </g>
 <g transform="translate(651, 446) rotate(-15.0)" class="key keypos-68">
 <rect rx="6" ry="6" x="-29" y="-29" width="58" height="58" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">INTERNATIONAL</tspan><tspan x="0" dy="1.2em">4</tspan>
+<tspan x="0" dy="-0.6em" style="font-size: 77%">INTERNATIONAL</tspan><tspan x="0" dy="1.2em" style="font-size: 77%">4</tspan>
 </text>
 </g>
 <g transform="translate(703, 400) rotate(-15.0)" class="key keypos-69">
@@ -1108,7 +1108,7 @@ path.combo {
 <g transform="translate(0, 56)">
 <g transform="translate(39, 46)" class="key keypos-0">
 <rect rx="6" ry="6" x="-37" y="-29" width="74" height="58" class="key"/>
-<text x="0" y="0" class="key tap">&amp;studio_unlock</text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 71%">&amp;studio_unlock</tspan></text>
 </g>
 <g transform="translate(108, 46)" class="key keypos-1">
 <rect rx="6" ry="6" x="-29" y="-29" width="58" height="58" class="key"/>
@@ -1179,11 +1179,11 @@ path.combo {
 </g>
 <g transform="translate(418, 93)" class="key keypos-20">
 <rect rx="6" ry="6" x="-29" y="-29" width="58" height="58" class="key"/>
-<text x="0" y="0" class="key tap">&amp;bootloader</text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 91%">&amp;bootloader</tspan></text>
 </g>
 <g transform="translate(698, 93)" class="key keypos-21">
 <rect rx="6" ry="6" x="-29" y="-29" width="58" height="58" class="key"/>
-<text x="0" y="0" class="key tap">&amp;bootloader</text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 91%">&amp;bootloader</tspan></text>
 </g>
 <g transform="translate(760, 93)" class="key keypos-22">
 <rect rx="6" ry="6" x="-29" y="-29" width="58" height="58" class="key"/>
@@ -1460,7 +1460,7 @@ path.combo {
 </g>
 <g transform="translate(108, 170)" class="key keypos-29">
 <rect rx="6" ry="6" x="-29" y="-29" width="58" height="58" class="key"/>
-<text x="0" y="0" class="key tap">&amp;select_all</text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 91%">&amp;select_all</tspan></text>
 </g>
 <g transform="translate(170, 155)" class="key keypos-30">
 <rect rx="6" ry="6" x="-29" y="-29" width="58" height="58" class="key"/>
@@ -1527,7 +1527,7 @@ path.combo {
 </g>
 <g transform="translate(294, 217)" class="key keypos-50">
 <rect rx="6" ry="6" x="-29" y="-29" width="58" height="58" class="key"/>
-<text x="0" y="0" class="key tap">&amp;td_paste_pwb</text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 77%">&amp;td_paste_pwb</tspan></text>
 </g>
 <g transform="translate(356, 217)" class="key keypos-51">
 <rect rx="6" ry="6" x="-29" y="-29" width="58" height="58" class="key"/>
