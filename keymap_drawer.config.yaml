@@ -1,0 +1,4 @@
+draw_config:
+  shrink_wide_legends: 15
+  key_w: 65
+  key_h: 62
