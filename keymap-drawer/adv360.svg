@@ -126,6 +126,7 @@ path.combo {
 
 text.label, text.footer {
     stroke: none;
+    fill: #888;
 }
 </style>
 <g transform="translate(30, 0)" class="layer-Base">
