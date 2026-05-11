@@ -1,4 +1,5 @@
-layout: {zmk_keyboard: adv360}
+layout:
+  qmk_info_json: config/adv360.json
 layers:
   Base:
   - - ESCAPE
@@ -7,26 +8,76 @@ layers:
     - '3'
     - '4'
     - '5'
-    - {t: Kp, h: toggle}
+    - t: Kp
+      h: toggle
     - Mod
     - '6'
     - '7'
-  - ['8', '9', '0', '-', TAB, INTERNATIONAL 1, ',', ., P, Y]
-  - [PRINTSCREEN, '', F, G, C, R, L, '[', LCTRL, A]
-  - [O, E, U, I, '&td_sac_paste', LCTRL, LALT, LGUI, RALT, '']
-  - [D, H, T, N, S, /, LSHFT, ;, Q, J]
-  - [K, X, '&td_home_pgup', '&td_end_pgdn', B, M, W, V, Z, RSHFT]
+  - - '8'
+    - '9'
+    - '0'
+    - '-'
+    - TAB
+    - INTERNATIONAL 1
+    - ','
+    - .
+    - P
+    - Y
+  - - PRINTSCREEN
+    - ''
+    - F
+    - G
+    - C
+    - R
+    - L
+    - '['
+    - LCTRL
+    - A
+  - - O
+    - E
+    - U
+    - I
+    - '&td_sac_paste'
+    - LCTRL
+    - LALT
+    - LGUI
+    - RALT
+    - ''
+  - - D
+    - H
+    - T
+    - N
+    - S
+    - /
+    - LSHFT
+    - ;
+    - Q
+    - J
+  - - K
+    - X
+    - '&td_home_pgup'
+    - '&td_end_pgdn'
+    - B
+    - M
+    - W
+    - V
+    - Z
+    - RSHFT
   - - Cmd
     - ''''
     - INT3
     - ']'
     - '#'
-    - {t: DEL, h: Fn}
-    - {t: SPACE, h: LSHFT}
+    - t: DEL
+      h: Fn
+    - t: SPACE
+      h: LSHFT
     - INTERNATIONAL 5
     - INTERNATIONAL 4
-    - {t: ENTER, h: RSHFT}
-  - - {t: BACKSPACE, h: Fn}
+    - t: ENTER
+      h: RSHFT
+  - - t: BACKSPACE
+      h: Fn
     - LEFT
     - DOWN
     - UP
@@ -39,17 +90,77 @@ layers:
     - '3'
     - '4'
     - '5'
-    - {t: ▽, type: trans}
+    - t: ▽
+      type: trans
     - Mod
     - '6'
     - KP NUM
-  - ['8', KP DIVIDE, KP MULTIPLY, '-', TAB, Q, W, E, R, T]
-  - ['', '', Y, KP 7, KP 8, KP 9, KP MINUS, '[', CAPS, A]
-  - [S, D, F, G, '', LCTRL, LALT, LGUI, RCTRL, '']
-  - [H, KP 4, KP 5, KP 6, KP PLUS, '''', LSHFT, Z, X, C]
-  - [V, B, HOME, PG UP, N, KP 1, KP 2, KP 3, KP ENTER, RSHFT]
-  - [Cmd, ESC, '=', LEFT, RIGHT, BSPC, DEL, END, PG DN, ENTER]
-  - [KP 0, UP, DOWN, KP DOT, KP ENTER, Fn]
+  - - '8'
+    - KP DIVIDE
+    - KP MULTIPLY
+    - '-'
+    - TAB
+    - Q
+    - W
+    - E
+    - R
+    - T
+  - - ''
+    - ''
+    - Y
+    - KP 7
+    - KP 8
+    - KP 9
+    - KP MINUS
+    - '['
+    - CAPS
+    - A
+  - - S
+    - D
+    - F
+    - G
+    - ''
+    - LCTRL
+    - LALT
+    - LGUI
+    - RCTRL
+    - ''
+  - - H
+    - KP 4
+    - KP 5
+    - KP 6
+    - KP PLUS
+    - ''''
+    - LSHFT
+    - Z
+    - X
+    - C
+  - - V
+    - B
+    - HOME
+    - PG UP
+    - N
+    - KP 1
+    - KP 2
+    - KP 3
+    - KP ENTER
+    - RSHFT
+  - - Cmd
+    - ESC
+    - '='
+    - LEFT
+    - RIGHT
+    - BSPC
+    - DEL
+    - END
+    - PG DN
+    - ENTER
+  - - KP 0
+    - UP
+    - DOWN
+    - KP DOT
+    - KP ENTER
+    - Fn
   Fn:
   - - F12
     - F1
@@ -57,7 +168,8 @@ layers:
     - F3
     - F4
     - F5
-    - {t: Kp, h: toggle}
+    - t: Kp
+      h: toggle
     - Mod
     - F6
     - F7
@@ -65,31 +177,44 @@ layers:
     - F9
     - F10
     - F11
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
   - - ''
     - ''
     - '='
     - +
     - '"'
-    - {t: ▽, type: trans}
+    - t: ▽
+      type: trans
     - _
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
     - '1'
   - - '2'
     - '3'
     - '4'
     - '5'
     - ''
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
     - ''
   - - '6'
     - '7'
@@ -97,62 +222,138 @@ layers:
     - '9'
     - '0'
     - '-'
-    - {t: ▽, type: trans}
+    - t: ▽
+      type: trans
     - '!'
     - '@'
     - '#'
   - - $
     - '%'
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
     - ^
     - '&'
     - '*'
     - (
     - ''''
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - t: ▽
+      type: trans
+  - - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
     - '='
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - type: held
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+  - - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
   Mod:
   - - '&studio_unlock'
-    - {t: BT, h: '0'}
-    - {t: BT, h: '1'}
-    - {t: BT, h: '2'}
-    - {t: BT, h: '3'}
-    - {t: BT, h: '4'}
+    - t: BT
+      h: '0'
+    - t: BT
+      h: '1'
+    - t: BT
+      h: '2'
+    - t: BT
+      h: '3'
+    - t: BT
+      h: '4'
     - ''
-    - {type: held}
+    - type: held
     - ''
     - ''
-  - ['', '', '', '', '', '', '', '', '', '']
-  - ['&bootloader', '&bootloader', '', '', '', '', '', '', '', '']
-  - ['', '', '', '', '', '', '', BT CLR, '', RGB MEFS CMD 5]
-  - ['', '', '', '', '', '', '', '', '', '']
-  - ['&macro_ver', '', '', '', '', '', '', '', '', '']
-  - ['', '', '', '', '', '', '', '', '', '&bl BL_TOG']
-  - [RGB TOG, '&bl BL_INC', '&bl BL_DEC', '', '', '']
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - '&bootloader'
+    - '&bootloader'
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - BT CLR
+    - ''
+    - RGB MEFS CMD 5
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - '&macro_ver'
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - '&bl BL_TOG'
+  - - RGB TOG
+    - '&bl BL_INC'
+    - '&bl BL_DEC'
+    - ''
+    - ''
+    - ''
   Cmd:
-  - ['', '', '', '', '', '', '', '', '', '']
-  - ['', '', '', '', '', '', '', '', '', '']
-  - ['', '', '', '', '', '', '', '', '', '&select_all']
-  - ['', '', '', '', '', '', '', '', '', '']
-  - ['', '', '', '', '', '', '', '&undo', '&cut', '&copy']
-  - ['&td_paste_pwb', '', '', '', '', '', '', '', '', '']
-  - - {type: held}
+  - - ''
     - ''
     - ''
     - ''
@@ -162,4 +363,69 @@ layers:
     - ''
     - ''
     - ''
-  - ['', '', '', '', '', '']
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - '&select_all'
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - '&undo'
+    - '&cut'
+    - '&copy'
+  - - '&td_paste_pwb'
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - type: held
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
