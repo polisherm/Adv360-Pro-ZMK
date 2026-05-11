@@ -21,7 +21,7 @@ The workflow renders the SVG, then commits and pushes it back to the branch auto
 
 ## Configuration
 
-- [`../keymap_drawer.config.yaml`](../keymap_drawer.config.yaml) — Drawing config (label font size, halo stroke width, shrink threshold for long legends)
+- [`keymap_drawer.config.yaml`](keymap_drawer.config.yaml) — Drawing config (label font size, halo stroke width, shrink threshold for long legends)
 - [`../config/adv360.json`](../config/adv360.json) — Local physical layout override (upstream `extra_layouts/adv360.json` scaled 1.5x so long keycode names like `INTERNATIONAL` and `&td_home_pgup` fit inside key cells)
 
 ## Manual regeneration

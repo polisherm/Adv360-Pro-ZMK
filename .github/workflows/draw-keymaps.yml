@@ -6,7 +6,7 @@ on:
       - 'config/adv360.keymap'
       - 'config/adv360.json'
       - 'config/macros.dtsi'
-      - 'keymap_drawer.config.yaml'
+      - 'keymap-drawer/keymap_drawer.config.yaml'
       - '.github/workflows/draw-keymaps.yml'
   workflow_dispatch:
 
@@ -19,3 +19,4 @@ jobs:
     with:
       keymap_patterns: 'config/adv360.keymap'
       output_folder: 'keymap-drawer'
+      config_path: 'keymap-drawer/keymap_drawer.config.yaml'
