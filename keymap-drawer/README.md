@@ -31,3 +31,9 @@ Trigger from the Actions tab via `workflow_dispatch`, or push any change to one 
 ## Editing the keymap
 
 Edit `../config/adv360.keymap`. Do not edit `adv360.svg` directly — it is overwritten on every regeneration.
+
+## License & Attribution
+
+This rendering pipeline depends on [keymap-drawer](https://github.com/caksoylar/keymap-drawer) by Cem Aksoylar, distributed under the MIT License. The full license text is included in [`LICENSE-keymap-drawer.txt`](LICENSE-keymap-drawer.txt).
+
+[`../config/adv360.json`](../config/adv360.json) is derived from keymap-drawer's [`resources/extra_layouts/adv360.json`](https://github.com/caksoylar/keymap-drawer/blob/main/resources/extra_layouts/adv360.json). All numeric layout properties (`x`, `y`, `w`, `h`, `rx`, `ry`) are scaled by 1.5x so long keycode legends fit inside cells. The original MIT License terms continue to apply to this derivative.
