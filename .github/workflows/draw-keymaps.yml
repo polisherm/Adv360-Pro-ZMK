@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'config/adv360.keymap'
+      - 'config/adv360.json'
       - 'config/macros.dtsi'
       - 'keymap_drawer.config.yaml'
       - '.github/workflows/draw-keymaps.yml'
