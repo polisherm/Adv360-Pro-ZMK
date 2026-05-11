@@ -1,2 +1,6 @@
 draw_config:
   shrink_wide_legends: 10
+  svg_extra_style: |
+    text.label, text.footer {
+        stroke: none;
+    }
