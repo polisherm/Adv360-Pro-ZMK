@@ -123,6 +123,10 @@ path.combo {
     visibility: hidden;
 }
 /* End Tabler Icons Cleanup */
+
+text.label, text.footer {
+    stroke: none;
+}
 </style>
 <g transform="translate(30, 0)" class="layer-Base">
 <text x="0" y="28" class="label" id="Base">Base:</text>
