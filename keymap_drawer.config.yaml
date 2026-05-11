@@ -4,6 +4,7 @@ draw_config:
     text.label, text.footer {
         stroke: none;
         fill: #24292e;
+        font-size: 28px;
     }
     @media (prefers-color-scheme: dark) {
         text.label, text.footer {
