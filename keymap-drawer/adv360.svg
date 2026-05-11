@@ -125,7 +125,7 @@ path.combo {
 /* End Tabler Icons Cleanup */
 
 text.label, text.footer {
-    stroke-width: 2;
+    stroke-width: 8;
     font-size: 28px;
 }
 </style>
