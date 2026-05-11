@@ -38,6 +38,18 @@ jobs:
         run: |
           keymap -c keymap-drawer/keymap_drawer.config.yaml parse -c 10 -z config/adv360.keymap > keymap-drawer/adv360.yaml
 
+      - name: Override layout to use local scaled adv360.json
+        run: |
+          python <<'EOF'
+          import yaml
+          path = 'keymap-drawer/adv360.yaml'
+          with open(path, encoding='utf-8') as f:
+              d = yaml.safe_load(f)
+          d['layout'] = {'qmk_info_json': 'config/adv360.json'}
+          with open(path, 'w', encoding='utf-8') as f:
+              yaml.safe_dump(d, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
+          EOF
+
       - name: Draw light SVG
         run: |
           keymap -c keymap-drawer/keymap_drawer.config.yaml draw keymap-drawer/adv360.yaml > keymap-drawer/adv360-light.svg
