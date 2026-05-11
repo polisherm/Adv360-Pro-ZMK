@@ -126,7 +126,12 @@ path.combo {
 
 text.label, text.footer {
     stroke: none;
-    fill: #888;
+    fill: #24292e;
+}
+@media (prefers-color-scheme: dark) {
+    text.label, text.footer {
+        fill: #c9d1d9;
+    }
 }
 </style>
 <g transform="translate(30, 0)" class="layer-Base">
