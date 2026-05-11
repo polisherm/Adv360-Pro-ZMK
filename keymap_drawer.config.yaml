@@ -2,12 +2,6 @@ draw_config:
   shrink_wide_legends: 10
   svg_extra_style: |
     text.label, text.footer {
-        stroke: none;
-        fill: #24292e;
+        stroke-width: 2;
         font-size: 28px;
-    }
-    @media (prefers-color-scheme: dark) {
-        text.label, text.footer {
-            fill: #ffffff;
-        }
     }
