@@ -130,7 +130,7 @@ text.label, text.footer {
 }
 @media (prefers-color-scheme: dark) {
     text.label, text.footer {
-        fill: #c9d1d9;
+        fill: #ffffff;
     }
 }
 </style>
