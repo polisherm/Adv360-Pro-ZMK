@@ -50,7 +50,8 @@ layers:
     - S
     - /
     - LSHFT
-    - ;
+    - t: ;
+      s: ;
     - Q
     - J
   - - K
@@ -82,7 +83,7 @@ layers:
     - DOWN
     - UP
     - RIGHT
-    - Fn
+    - RCTRL
   Kp:
   - - '`'
     - '1'
@@ -194,8 +195,7 @@ layers:
     - '='
     - +
     - '"'
-    - t: ▽
-      type: trans
+    - ':'
     - _
     - t: ▽
       type: trans
