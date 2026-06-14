@@ -120,6 +120,15 @@
           bindings = <&kp>, <&kp>;
           hold-trigger-key-positions = <KEYS_LEFT KEYS_RIGHT>;  // 親指クラスターには適用しない
       };
+
+      // SKKでShift+子音を多用するため、意図せず Shift+; で別のシグナルが送られるのを防ぐ。
+      // （Shift が押されていても素の ; を送る）
+      semi_colon_only: semi_colon_only {
+          compatible = "zmk,behavior-mod-morph";
+          #binding-cells = <0>;
+          bindings = <&kp SEMICOLON>, <&kp SEMICOLON>;
+          mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
     };
 
     macros {
@@ -173,8 +182,8 @@
                 &kp ESCAPE  &kp N1              &kp N2    &kp N3            &kp N4          &kp N5 &tog KEYPAD                                                                                   &mo MOD          &kp N6   &kp N7   &kp N8   &kp N9 &kp N0    &kp MINUS
                 &kp TAB     &kp INTERNATIONAL_1 &kp COMMA &kp PERIOD        &kp P           &kp Y  &kp PRINTSCREEN                                                                               &none            &kp F    &kp G    &kp C    &kp R  &kp L     &kp LEFT_BRACKET
                 &kp LCTRL   &kp A               &kp O     &kp E             &kp U           &kp I  &td_sac_paste   &kp LCTRL          &kp LALT            &kp LGUI            &kp RALT           &none            &kp D    &kp H    &kp T    &kp N  &kp S     &kp FSLH
-                &kp LSHFT   &kp SEMICOLON       &kp Q     &kp J             &kp K           &kp X                                     &td_home_pgup       &td_end_pgdn                                            &kp B    &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
-                &mo COMMAND &kp SINGLE_QUOTE    &kp INT3  &kp RIGHT_BRACKET &kp NON_US_HASH        &lt FN DEL      &SandS LSHFT SPACE &kp INTERNATIONAL_5 &kp INTERNATIONAL_4 &SandS RSHFT ENTER &lt FN BACKSPACE          &kp LEFT &kp DOWN &kp UP &kp RIGHT &mo FN
+                &kp LSHFT   &semi_colon_only    &kp Q     &kp J             &kp K           &kp X                                     &td_home_pgup       &td_end_pgdn                                            &kp B    &kp M    &kp W    &kp V  &kp Z     &kp RSHFT
+                &mo COMMAND &kp SINGLE_QUOTE    &kp INT3  &kp RIGHT_BRACKET &kp NON_US_HASH        &lt FN DEL      &SandS LSHFT SPACE &kp INTERNATIONAL_5 &kp INTERNATIONAL_4 &SandS RSHFT ENTER &lt FN BACKSPACE          &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp RCTRL
             >;
         };
 
@@ -195,7 +204,7 @@
 
             bindings = <
                 &kp F12  &kp F1  &kp F2    &kp F3    &kp F4     &kp F5             &tog KEYPAD                                             &mo MOD &kp F6     &kp F7   &kp F8    &kp F9    &kp F10        &kp F11
-                &trans  &trans   &trans    &trans    &trans     &trans             &none                                                   &none   &kp EQUAL  &kp PLUS &kp DQT   &trans    &kp UNDERSCORE &trans
+                &trans  &trans   &trans    &trans    &trans     &trans             &none                                                   &none   &kp EQUAL  &kp PLUS &kp DQT   &kp COLON &kp UNDERSCORE &trans
                 &trans  &kp N1   &kp N2    &kp N3    &kp N4     &kp N5             &none  &trans  &trans                  &trans  &trans   &none   &kp N6     &kp N7   &kp N8    &kp N9    &kp N0         &kp MINUS
                 &trans  &kp EXCL &kp AT    &kp HASH  &kp DOLLAR &kp PERCENT                       &trans                  &trans                   &kp CARET  &kp AMPS &kp ASTRK &kp LPAR  &kp SQT        &trans
                 &trans  &trans   &kp EQUAL &trans    &trans                        &trans &trans  &trans                  &trans  &trans   &trans             &trans   &trans    &trans    &trans         &trans
