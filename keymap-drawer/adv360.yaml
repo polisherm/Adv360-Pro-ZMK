@@ -48,7 +48,8 @@ layers:
     - T
     - N
     - S
-    - /
+    - t: /
+      h: RCTRL
     - LSHFT
     - t: ;
       s: ;
