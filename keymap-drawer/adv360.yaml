@@ -48,7 +48,8 @@ layers:
     - T
     - N
     - S
-    - /
+    - t: '-'
+      s: '?'
     - LSHFT
     - t: ;
       s: ;
@@ -63,7 +64,7 @@ layers:
     - W
     - V
     - Z
-    - RSHFT
+    - /
   - - Cmd
     - ''''
     - INT3
