@@ -21,11 +21,11 @@ layers:
     - INTERNATIONAL 1
     - ','
     - .
-    - P
-    - Y
+    - V
+    - F
   - - PRINTSCREEN
     - ''
-    - F
+    - Y
     - G
     - C
     - R
@@ -62,7 +62,7 @@ layers:
     - B
     - M
     - W
-    - V
+    - P
     - Z
     - /
   - - Cmd
@@ -185,10 +185,8 @@ layers:
       type: trans
     - t: ▽
       type: trans
-    - t: ▽
-      type: trans
-    - t: ▽
-      type: trans
+    - '&copy'
+    - '&paste'
     - t: ▽
       type: trans
   - - ''
@@ -404,7 +402,7 @@ layers:
     - '&undo'
     - '&cut'
     - '&copy'
-  - - '&td_paste_pwb'
+  - - '&paste'
     - ''
     - ''
     - ''
