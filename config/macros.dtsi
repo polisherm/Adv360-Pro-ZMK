@@ -66,20 +66,6 @@ select_all: select_all {
       ;
 };
 
-// 「・」を入力してからペーストする。
-pwb: paste_with_bullets_and_newline {
-  label = "Paste with Bullets and Newline";
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings
-      = <&macro_tap &kp FSLH>
-      , <&macro_press &kp LCTRL>
-      , <&macro_tap &kp V>
-      , <&macro_release &kp LCTRL>
-      , <&macro_tap &kp ENTER>
-      ;
-};
-
 // default macros.
 macro_quotes: macro_quotes {
   compatible = "zmk,behavior-macro";
