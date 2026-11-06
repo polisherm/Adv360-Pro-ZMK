@@ -22,6 +22,17 @@ undo: undo {
       ;
 };
 
+redo: redo {
+  label = "Redo";
+  compatible = "zmk,behavior-macro";
+  #binding-cells = <0>;
+  bindings
+      = <&macro_press &kp LCTRL>
+      , <&macro_tap &kp Y>
+      , <&macro_release &kp LCTRL>
+      ;
+};
+
 cut: cut {
   label = "Cut";
   compatible = "zmk,behavior-macro";

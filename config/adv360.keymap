@@ -83,6 +83,17 @@
           hold-trigger-key-positions = <KEYS_LEFT THUMBS>;
       };
 
+      // 無変換・変換用。タップで IME のオン/オフ、長押しで COMMAND レイヤー。
+      // balanced にして、IME を切り替えた直後の打ち始め（親指を離す前に次のキーを押す）を
+      // 長押しと判定しにくくする。COMMAND に化けると全選択や貼り付けになり被害が大きいため。
+      lt_cmd: layer_tap_command {
+          compatible = "zmk,behavior-hold-tap";
+          #binding-cells = <2>;
+          tapping-term-ms = <200>;
+          flavor = "balanced";
+          bindings = <&mo>, <&kp>;
+      };
+
       // tap-dance functions
       td_sac_paste: select_all_copy_and_paste {
           compatible = "zmk,behavior-tap-dance";
@@ -187,7 +198,7 @@
                 &kp TAB     &kp INTERNATIONAL_1 &kp COMMA &kp PERIOD        &kp V           &none  &kp PRINTSCREEN                                                                              &none            &kp Y    &kp G    &kp C    &kp R  &kp L     &kp LEFT_BRACKET
                 &kp LCTRL   &kp A               &kp O     &kp E             &kp U           &kp I  &td_sac_paste   &kp LCTRL          &kp LALT            &kp LGUI            &kp RALT           &kp F            &kp D   &kp H    &kp T    &kp N  &kp S     &minus_qmark
                 &kp LSHFT   &semi_colon_only    &kp Q     &kp J             &kp K           &kp X                                     &td_home_pgup       &td_end_pgdn                                            &kp B    &kp M    &kp W    &kp P  &kp Z     &kp FSLH
-                &mo COMMAND &kp SINGLE_QUOTE    &kp INT3  &kp RIGHT_BRACKET &kp NON_US_HASH        &lt FN DEL      &SandS LSHFT SPACE &kp INTERNATIONAL_5 &kp INTERNATIONAL_4 &SandS RSHFT ENTER &lt FN BACKSPACE          &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp RCTRL
+                &mo COMMAND &kp SINGLE_QUOTE    &kp INT3  &kp RIGHT_BRACKET &kp NON_US_HASH        &lt FN DEL      &SandS LSHFT SPACE &lt_cmd COMMAND INTERNATIONAL_5 &lt_cmd COMMAND INTERNATIONAL_4 &SandS RSHFT ENTER &lt FN BACKSPACE          &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp RCTRL
             >;
         };
 
@@ -233,8 +244,8 @@
             bindings = <
                 &none    &none          &none    &none    &none            &none  &none                                        &none    &none    &none    &none    &none    &none    &none
                 &none    &none          &none    &none    &none            &none  &none                                        &none    &none    &none    &none    &none    &none    &none
-                &none    &select_all    &none    &none    &none            &none  &none    &none    &none    &none    &none    &none    &none    &none    &none    &none    &none    &none
-                &none    &undo          &cut     &copy    &paste           &none                    &none    &none                      &none    &none    &none    &none    &none    &none
+                &none    &select_all    &cut     &copy    &paste           &undo  &redo    &none    &none    &none    &none    &redo    &undo    &paste   &copy    &cut     &select_all &none
+                &none    &none          &none    &none    &none            &none                    &none    &none                      &none    &none    &none    &none    &none    &none
                 &none    &none          &none    &none    &none                   &none    &none    &none    &none    &none    &none             &none    &none    &none    &none    &none
             >;
         };
