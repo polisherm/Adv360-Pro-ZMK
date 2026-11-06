@@ -216,7 +216,6 @@ text.label, text.footer {
 </g>
 <g transform="translate(483, 126)" class="key keypos-19">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
-<text x="0" y="0" class="key tap">F</text>
 </g>
 <g transform="translate(567, 126)" class="key keypos-20">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
@@ -295,6 +294,7 @@ text.label, text.footer {
 </g>
 <g transform="translate(945, 210)" class="key keypos-39">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
+<text x="0" y="0" class="key tap">F</text>
 </g>
 <g transform="translate(1029, 210)" class="key keypos-40">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
@@ -413,15 +413,19 @@ text.label, text.footer {
 <g transform="translate(630, 604) rotate(15.0)" class="key keypos-67">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em" style="font-size: 77%">INTERNATIONAL</tspan><tspan x="0" dy="1.2em" style="font-size: 77%">5</tspan>
+<tspan x="0" dy="-0.9em" style="font-size: 77%">INTERNATIONAL</tspan><tspan x="0" dy="1.2em" style="font-size: 77%">5</tspan>
 </text>
-</g>
+<a href="#Cmd">
+<text x="0" y="38" class="key hold layer-activator">Cmd</text>
+</a></g>
 <g transform="translate(882, 604) rotate(-15.0)" class="key keypos-68">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em" style="font-size: 77%">INTERNATIONAL</tspan><tspan x="0" dy="1.2em" style="font-size: 77%">4</tspan>
+<tspan x="0" dy="-0.9em" style="font-size: 77%">INTERNATIONAL</tspan><tspan x="0" dy="1.2em" style="font-size: 77%">4</tspan>
 </text>
-</g>
+<a href="#Cmd">
+<text x="0" y="38" class="key hold layer-activator">Cmd</text>
+</a></g>
 <g transform="translate(952, 542) rotate(-15.0)" class="key keypos-69">
 <rect rx="6" ry="6" x="-40" y="-82" width="80" height="164" class="key"/>
 <text x="0" y="0" class="key tap">ENTER</text>
@@ -877,13 +881,13 @@ text.label, text.footer {
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(315, 126)" class="key keypos-17">
-<rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
-<text x="0" y="0" class="key tap">&amp;copy</text>
+<g transform="translate(315, 126)" class="key trans keypos-17">
+<rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(399, 126)" class="key keypos-18">
-<rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
-<text x="0" y="0" class="key tap">&amp;paste</text>
+<g transform="translate(399, 126)" class="key trans keypos-18">
+<rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g transform="translate(483, 126)" class="key trans keypos-19">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key trans"/>
@@ -1471,18 +1475,23 @@ text.label, text.footer {
 </g>
 <g transform="translate(231, 210)" class="key keypos-30">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
+<text x="0" y="0" class="key tap">&amp;cut</text>
 </g>
 <g transform="translate(315, 210)" class="key keypos-31">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
+<text x="0" y="0" class="key tap">&amp;copy</text>
 </g>
 <g transform="translate(399, 210)" class="key keypos-32">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
+<text x="0" y="0" class="key tap">&amp;paste</text>
 </g>
 <g transform="translate(483, 210)" class="key keypos-33">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
+<text x="0" y="0" class="key tap">&amp;undo</text>
 </g>
 <g transform="translate(567, 210)" class="key keypos-34">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
+<text x="0" y="0" class="key tap">&amp;redo</text>
 </g>
 <g transform="translate(592, 420) rotate(15.0)" class="key keypos-35">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
@@ -1498,21 +1507,27 @@ text.label, text.footer {
 </g>
 <g transform="translate(945, 210)" class="key keypos-39">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
+<text x="0" y="0" class="key tap">&amp;redo</text>
 </g>
 <g transform="translate(1029, 210)" class="key keypos-40">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
+<text x="0" y="0" class="key tap">&amp;undo</text>
 </g>
 <g transform="translate(1113, 210)" class="key keypos-41">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
+<text x="0" y="0" class="key tap">&amp;paste</text>
 </g>
 <g transform="translate(1197, 210)" class="key keypos-42">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
+<text x="0" y="0" class="key tap">&amp;copy</text>
 </g>
 <g transform="translate(1281, 210)" class="key keypos-43">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
+<text x="0" y="0" class="key tap">&amp;cut</text>
 </g>
 <g transform="translate(1365, 231)" class="key keypos-44">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 91%">&amp;select_all</tspan></text>
 </g>
 <g transform="translate(1460, 231)" class="key keypos-45">
 <rect rx="6" ry="6" x="-50" y="-40" width="101" height="80" class="key"/>
@@ -1522,19 +1537,15 @@ text.label, text.footer {
 </g>
 <g transform="translate(147, 315)" class="key keypos-47">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
-<text x="0" y="0" class="key tap">&amp;undo</text>
 </g>
 <g transform="translate(231, 294)" class="key keypos-48">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
-<text x="0" y="0" class="key tap">&amp;cut</text>
 </g>
 <g transform="translate(315, 294)" class="key keypos-49">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
-<text x="0" y="0" class="key tap">&amp;copy</text>
 </g>
 <g transform="translate(399, 294)" class="key keypos-50">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
-<text x="0" y="0" class="key tap">&amp;paste</text>
 </g>
 <g transform="translate(483, 294)" class="key keypos-51">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>

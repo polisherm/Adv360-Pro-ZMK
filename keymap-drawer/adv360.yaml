@@ -22,7 +22,7 @@ layers:
     - ','
     - .
     - V
-    - F
+    - ''
   - - PRINTSCREEN
     - ''
     - Y
@@ -42,7 +42,7 @@ layers:
     - LALT
     - LGUI
     - RALT
-    - ''
+    - F
   - - D
     - H
     - T
@@ -74,8 +74,10 @@ layers:
       h: Fn
     - t: SPACE
       h: LSHFT
-    - INTERNATIONAL 5
-    - INTERNATIONAL 4
+    - t: INTERNATIONAL 5
+      h: Cmd
+    - t: INTERNATIONAL 4
+      h: Cmd
     - t: ENTER
       h: RSHFT
   - - t: BACKSPACE
@@ -185,8 +187,10 @@ layers:
       type: trans
     - t: ▽
       type: trans
-    - '&copy'
-    - '&paste'
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
     - t: ▽
       type: trans
   - - ''
@@ -382,27 +386,27 @@ layers:
     - ''
     - ''
     - '&select_all'
-  - - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-  - - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - '&undo'
-    - '&cut'
+  - - '&cut'
     - '&copy'
-  - - '&paste'
+    - '&paste'
+    - '&undo'
+    - '&redo'
+    - ''
+    - ''
+    - ''
+    - ''
+    - '&redo'
+  - - '&undo'
+    - '&paste'
+    - '&copy'
+    - '&cut'
+    - '&select_all'
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - - ''
     - ''
     - ''
     - ''
