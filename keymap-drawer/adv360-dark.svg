@@ -212,9 +212,11 @@ text.label, text.footer {
 </g>
 <g transform="translate(399, 126)" class="key keypos-18">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
+<text x="0" y="0" class="key tap">V</text>
 </g>
 <g transform="translate(483, 126)" class="key keypos-19">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
+<text x="0" y="0" class="key tap">F</text>
 </g>
 <g transform="translate(567, 126)" class="key keypos-20">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
