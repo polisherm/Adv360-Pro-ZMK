@@ -45,9 +45,12 @@
 
 // Spaceなどの連続入力をしたいケースがあるため追加。
 // 200ms以内に2回タップするとlayer-tapにおける通常キー（レイヤーキー以外）の入力が有効になる。
+// balanced にして、Fn + 矢印を素早く打ったときに BackSpace や Delete に化けるのを防ぐ。
+// 親指を離す前に次のキーを押しただけなら、タップのまま扱われる。
 &lt {
     tapping-term-ms = <200>;
     quick-tap-ms = <175>;
+    flavor = "balanced";
 };
 
 &mt {
