@@ -21,7 +21,7 @@ layers:
     - INTERNATIONAL 1
     - ','
     - .
-    - V
+    - ''
     - ''
   - - PRINTSCREEN
     - ''
@@ -42,7 +42,7 @@ layers:
     - LALT
     - LGUI
     - RALT
-    - F
+    - ''
   - - D
     - H
     - T
@@ -82,10 +82,10 @@ layers:
       h: RSHFT
   - - t: BACKSPACE
       h: Fn
-    - LEFT
-    - DOWN
-    - UP
-    - RIGHT
+    - F
+    - ''
+    - V
+    - ''
     - RCTRL
   Kp:
   - - '`'
@@ -263,14 +263,10 @@ layers:
       type: trans
   - - t: ▽
       type: trans
-    - t: ▽
-      type: trans
-    - t: ▽
-      type: trans
-    - t: ▽
-      type: trans
-    - t: ▽
-      type: trans
+    - LEFT
+    - DOWN
+    - UP
+    - RIGHT
     - t: ▽
       type: trans
   Mod:
