@@ -89,11 +89,14 @@
       // 無変換・変換用。タップで IME のオン/オフ、長押しで COMMAND レイヤー。
       // balanced にして、IME を切り替えた直後の打ち始め（親指を離す前に次のキーを押す）を
       // 長押しと判定しにくくする。COMMAND に化けると全選択や貼り付けになり被害が大きいため。
+      // retro-tap は、ほかのキーを押さずに 200ms を超えて押してから離したときに、タップとして扱う。
+      // 少し長めに押しただけで IME のオン/オフが COMMAND に吸われるのを防ぐ。
       lt_cmd: layer_tap_command {
           compatible = "zmk,behavior-hold-tap";
           #binding-cells = <2>;
           tapping-term-ms = <200>;
           flavor = "balanced";
+          retro-tap;
           bindings = <&mo>, <&kp>;
       };
 
