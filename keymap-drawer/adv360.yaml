@@ -66,10 +66,10 @@ layers:
     - Z
     - /
   - - Cmd
-    - ''''
-    - INT3
-    - ']'
-    - '#'
+    - LEFT
+    - DOWN
+    - UP
+    - RIGHT
     - t: DEL
       h: Fn
     - t: SPACE
@@ -245,13 +245,10 @@ layers:
       type: trans
   - - t: ▽
       type: trans
-    - t: ▽
-      type: trans
-    - '='
-    - t: ▽
-      type: trans
-    - t: ▽
-      type: trans
+    - ''''
+    - INT3
+    - ']'
+    - '#'
     - type: held
     - t: ▽
       type: trans
