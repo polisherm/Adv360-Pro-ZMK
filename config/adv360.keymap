@@ -208,7 +208,7 @@
                 &kp TAB     &kp INTERNATIONAL_1 &kp COMMA &kp PERIOD        &kp V           &kp F  &kp PRINTSCREEN                                                                              &none            &kp Y    &kp G    &kp C    &kp R  &kp L     &kp LEFT_BRACKET
                 &kp LCTRL   &kp A               &kp O     &kp E             &kp U           &kp I  &td_sac_paste   &kp LCTRL          &kp LALT            &kp LGUI            &kp RALT           &none            &kp D   &kp H    &kp T    &kp N  &kp S     &minus_qmark
                 &kp LSHFT   &semi_colon_only    &kp Q     &kp J             &kp K           &kp X                                     &td_home_pgup       &td_end_pgdn                                            &kp B    &kp M    &kp W    &kp P  &kp Z     &kp FSLH
-                &mo COMMAND &kp SINGLE_QUOTE    &kp INT3  &kp RIGHT_BRACKET &kp NON_US_HASH        &lt FN DEL      &SandS LSHFT SPACE &lt_cmd COMMAND INTERNATIONAL_5 &lt_cmd COMMAND INTERNATIONAL_4 &SandS RSHFT ENTER &lt FN BACKSPACE          &kp F    &none    &kp V  &none     &kp RCTRL
+                &mo COMMAND &kp LEFT            &kp DOWN  &kp UP            &kp RIGHT              &lt FN DEL      &SandS LSHFT SPACE &lt_cmd COMMAND INTERNATIONAL_5 &lt_cmd COMMAND INTERNATIONAL_4 &SandS RSHFT ENTER &lt FN BACKSPACE          &kp F    &none    &kp V  &none     &kp RCTRL
             >;
         };
 
@@ -232,7 +232,7 @@
                 &trans  &trans   &trans    &trans    &trans     &trans             &none                                                   &none   &kp EQUAL  &kp PLUS &kp DQT   &kp COLON &kp UNDERSCORE &trans
                 &trans  &kp N1   &kp N2    &kp N3    &kp N4     &kp N5             &none  &trans  &trans                  &trans  &trans   &none   &kp N6     &kp N7   &kp N8    &kp N9    &kp N0         &kp MINUS
                 &trans  &kp EXCL &kp AT    &kp HASH  &kp DOLLAR &kp PERCENT                       &trans                  &trans                   &kp CARET  &kp AMPS &kp ASTRK &kp LPAR  &kp SQT        &trans
-                &trans  &trans   &kp EQUAL &trans    &trans                        &trans &trans  &trans                  &trans  &trans   &trans             &kp LEFT &kp DOWN  &kp UP    &kp RIGHT      &trans
+                &trans  &kp SINGLE_QUOTE &kp INT3 &kp RIGHT_BRACKET &kp NON_US_HASH &trans &trans  &trans                 &trans  &trans   &trans             &kp LEFT &kp DOWN  &kp UP    &kp RIGHT      &trans
             >;
         };
 
