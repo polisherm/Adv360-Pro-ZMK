@@ -376,7 +376,7 @@ text.label, text.footer {
 </g>
 <g transform="translate(1460, 315)" class="key keypos-59">
 <rect rx="6" ry="6" x="-50" y="-40" width="101" height="80" class="key"/>
-<text x="0" y="0" class="key tap">/</text>
+<text x="0" y="0" class="key tap">RSHFT</text>
 </g>
 <g transform="translate(52, 399)" class="key keypos-60">
 <rect rx="6" ry="6" x="-50" y="-40" width="101" height="80" class="key"/>
@@ -450,6 +450,7 @@ text.label, text.footer {
 </g>
 <g transform="translate(1365, 399)" class="key keypos-74">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
+<text x="0" y="0" class="key tap">/</text>
 </g>
 <g transform="translate(1460, 399)" class="key keypos-75">
 <rect rx="6" ry="6" x="-50" y="-40" width="101" height="80" class="key"/>
@@ -1096,9 +1097,9 @@ text.label, text.footer {
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(1365, 399)" class="key trans keypos-74">
-<rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(1365, 399)" class="key keypos-74">
+<rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
+<text x="0" y="0" class="key tap">&#x27;</text>
 </g>
 <g transform="translate(1460, 399)" class="key trans keypos-75">
 <rect rx="6" ry="6" x="-50" y="-40" width="101" height="80" class="key trans"/>

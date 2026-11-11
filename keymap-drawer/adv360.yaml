@@ -64,7 +64,7 @@ layers:
     - W
     - P
     - Z
-    - /
+    - RSHFT
   - - Cmd
     - ''''
     - INT3
@@ -85,7 +85,7 @@ layers:
     - ''
     - F
     - V
-    - ''
+    - /
     - RCTRL
   Kp:
   - - '`'
@@ -269,8 +269,7 @@ layers:
       type: trans
     - t: ▽
       type: trans
-    - t: ▽
-      type: trans
+    - ''''
     - t: ▽
       type: trans
   Mod:
