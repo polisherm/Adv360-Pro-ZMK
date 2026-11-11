@@ -66,10 +66,10 @@ layers:
     - Z
     - /
   - - Cmd
-    - LEFT
-    - DOWN
-    - UP
-    - RIGHT
+    - ''''
+    - INT3
+    - ']'
+    - '#'
     - t: DEL
       h: Fn
     - t: SPACE
@@ -82,8 +82,8 @@ layers:
       h: RSHFT
   - - t: BACKSPACE
       h: Fn
-    - F
     - ''
+    - F
     - V
     - ''
     - RCTRL
@@ -204,51 +204,54 @@ layers:
       type: trans
     - t: ▽
       type: trans
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - ''
+  - - ''
+    - LEFT
+    - DOWN
+    - UP
+    - RIGHT
+    - '-'
+    - t: ▽
+      type: trans
     - '1'
-  - - '2'
+    - '2'
     - '3'
-    - '4'
+  - - '4'
     - '5'
-    - ''
     - t: ▽
       type: trans
     - t: ▽
       type: trans
-    - t: ▽
-      type: trans
-    - t: ▽
-      type: trans
-    - ''
-  - - '6'
+    - '6'
     - '7'
     - '8'
     - '9'
     - '0'
-    - '-'
-    - t: ▽
-      type: trans
-    - '!'
-    - '@'
-    - '#'
-  - - $
-    - '%'
-    - t: ▽
-      type: trans
-    - t: ▽
-      type: trans
-    - ^
-    - '&'
-    - '*'
-    - (
-    - ''''
     - t: ▽
       type: trans
   - - t: ▽
       type: trans
-    - ''''
-    - INT3
-    - ']'
-    - '#'
+    - t: ▽
+      type: trans
+    - '='
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
     - type: held
     - t: ▽
       type: trans
@@ -260,10 +263,14 @@ layers:
       type: trans
   - - t: ▽
       type: trans
-    - LEFT
-    - DOWN
-    - UP
-    - RIGHT
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
     - t: ▽
       type: trans
   Mod:
