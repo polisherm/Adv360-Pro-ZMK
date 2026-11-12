@@ -197,7 +197,7 @@ layers:
     - ''
     - '='
     - +
-    - '"'
+    - UP
     - ':'
     - _
     - t: ▽
@@ -222,8 +222,8 @@ layers:
   - - ''
     - LEFT
     - DOWN
-    - UP
     - RIGHT
+    - '"'
     - '-'
     - t: ▽
       type: trans

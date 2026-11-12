@@ -908,7 +908,7 @@ text.label, text.footer {
 </g>
 <g transform="translate(1197, 126)" class="key keypos-24">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
-<text x="0" y="0" class="key tap">&quot;</text>
+<text x="0" y="0" class="key tap">UP</text>
 </g>
 <g transform="translate(1281, 126)" class="key keypos-25">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
@@ -976,11 +976,11 @@ text.label, text.footer {
 </g>
 <g transform="translate(1281, 210)" class="key keypos-43">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
-<text x="0" y="0" class="key tap">UP</text>
+<text x="0" y="0" class="key tap">RIGHT</text>
 </g>
 <g transform="translate(1365, 231)" class="key keypos-44">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
-<text x="0" y="0" class="key tap">RIGHT</text>
+<text x="0" y="0" class="key tap">&quot;</text>
 </g>
 <g transform="translate(1460, 231)" class="key keypos-45">
 <rect rx="6" ry="6" x="-50" y="-40" width="101" height="80" class="key"/>
