@@ -1,0 +1,184 @@
+<title>Adv360 キー配列</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: one card per layer, each a full keyboard diagram drawn from the same physical grid; Base first */
+:root {
+  --bg: #f3f4f1; --surface: #ffffff; --fg: #1f2421; --muted: #69716c;
+  --key: #e4e7e2; --key-line: #b9bfb9; --raised: #d6dad4;
+  --accent: #1d7a5f; --accent-soft: #cfe9df; --mod: #4a5f8a; --mod-soft: #dde4f2;
+  --warn: #b5652a; --warn-soft: #f6e2d2;
+  --font-body: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --font-key: "IBM Plex Mono", ui-monospace, "Consolas", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #161a18; --surface: #1f2421; --fg: #e6eae6; --muted: #9aa39d;
+    --key: #2a302d; --key-line: #47504b; --raised: #343b37;
+    --accent: #5cc4a0; --accent-soft: #1f4237; --mod: #9fb3e0; --mod-soft: #26304a;
+    --warn: #e39a62; --warn-soft: #4a3020; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #161a18; --surface: #1f2421; --fg: #e6eae6; --muted: #9aa39d;
+  --key: #2a302d; --key-line: #47504b; --raised: #343b37;
+  --accent: #5cc4a0; --accent-soft: #1f4237; --mod: #9fb3e0; --mod-soft: #26304a;
+  --warn: #e39a62; --warn-soft: #4a3020; color-scheme: dark;
+}
+body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 15px; line-height: 1.75; }
+main {
+  max-width: 960px; margin: 0 auto; padding-block: 32px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 24px;
+}
+h1 { font-size: 1.5rem; margin: 0; text-wrap: balance; }
+h2 { font-size: 1.1rem; margin: 0; }
+p, ul { margin: 0; }
+ul { padding-left: 1.2em; }
+.lead { color: var(--muted); }
+.card { background: var(--surface); border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+.diagram { overflow-x: auto; }
+.diagram svg { display: block; min-width: 700px; width: 100%; height: auto; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 0.85rem; color: var(--muted); }
+.sw { display: inline-block; width: 14px; height: 14px; border-radius: 3px; vertical-align: -2px; margin-right: 6px; border: 1px solid var(--key-line); }
+svg .band { fill: var(--raised); }
+svg .k { fill: var(--key); stroke: var(--key-line); stroke-width: 1; }
+svg .k-mod { fill: var(--mod-soft); stroke: var(--mod); stroke-width: 1.5; }
+svg .k-new { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2; }
+svg .k-skk { fill: var(--warn-soft); stroke: var(--warn); stroke-width: 1.5; }
+svg .k-off { fill: none; stroke: var(--key-line); stroke-width: 1; stroke-dasharray: 4 3; }
+svg .t { fill: var(--fg); font-family: var(--font-key); font-size: 15px; text-anchor: middle; dominant-baseline: central; }
+svg .t-jp { fill: var(--fg); font-family: var(--font-body); font-size: 11px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }
+svg .t-sub { fill: var(--muted); font-family: var(--font-body); font-size: 9.5px; text-anchor: middle; dominant-baseline: central; }
+svg .lbl { fill: var(--muted); font-family: var(--font-body); font-size: 12px; }
+</style>
+
+<main>
+  <header style="display:flex;flex-direction:column;gap:6px">
+    <h1>Adv360 キー配列（2026-11-17）</h1>
+    <p class="lead">矢印を右手の一番下の段に戻し、Fn の 4 行目に記号を戻した時点。キーの中の文字は、JIS 配列の Windows で実際に出る文字。小さい文字は Shift を押したときに出る文字か、長押しの役目。</p>
+  </header>
+
+  <section class="card">
+    <h2>Base（ふだんの層）</h2>
+    <div class="diagram" data-layer="base"></div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--accent-soft);border-color:var(--accent)"></i>11/17 に動かしたキー</span>
+      <span><i class="sw" style="background:var(--mod-soft);border-color:var(--mod)"></i>修飾キー・レイヤーの入口</span>
+      <span><i class="sw" style="background:var(--raised)"></i>一段高い列</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Fn（親指の Delete か BackSpace を長押し）</h2>
+    <div class="diagram" data-layer="fn"></div>
+    <p class="lead">点線のキーは何も出さない。何も書いていないキーは Base と同じ文字が出る。</p>
+  </section>
+
+  <section class="card">
+    <h2>COMMAND（無変換か変換を長押し）</h2>
+    <div class="diagram" data-layer="cmd"></div>
+    <p class="lead">左右とも、指ごとに同じコマンド。redo は Ctrl+Y を送る。ほかのキーは何も出さない。</p>
+  </section>
+</main>
+
+<script>
+const LX = 20, RX = 500, STEP = 50, TOP = 40, TH = 330;
+// key: [label, sub, class]  class: '' | mod | new | skk | off ; null = no key
+const T = "", O = ["", "", "off"];
+const layers = {
+  base: {
+    left: [
+      [["Esc"],["1","!"],["2","\""],["3","#"],["4","$"],["5","%"],["Kp","切替","mod"]],
+      [["Tab"],["\\","_"],[",","<"],[".",">"],["Q","","new"],["X","","new"],["PrSc"]],
+      [["Ctrl","","mod"],["A"],["O"],["E"],["U"],["I"],["全+C","2回:貼付"]],
+      [["Shift","","mod"],[";"],["F","","new"],["J"],["K"],["V","","new"],null],
+      [["Cmd","","mod"],[":","*"],["¥","|"],["[","{"],["]","}"],null,null]
+    ],
+    right: [
+      [["Mod","","mod"],["6","&"],["7","'"],["8","("],["9",")"],["0"],["-","="]],
+      [O,["Y"],["G"],["C"],["R"],["L"],["@","`"]],
+      [O,["D"],["H"],["T"],["N"],["S"],["-","?"]],
+      [null,["B"],["M"],["W"],["P"],["Z"],["Shift","","mod"]],
+      [null,null,["←","","new"],["↓","","new"],["↑","","new"],["→","","new"],["/","?","new"]]
+    ],
+    thumbL: { top:[["Ctrl","","mod"],["Alt","","mod"]], tall:[["Del","長押 Fn","mod"],["Space","長押 Shift","mod"]], side:[["Home","2回:PgUp"],["無変換","長押 Cmd","mod"]] },
+    thumbR: { top:[["Win","","mod"],["RAlt","","mod"]], tall:[["Enter","長押 Shift","mod"],["BS","長押 Fn","mod"]], side:[["End","2回:PgDn"],["変換","長押 Cmd","mod"]] }
+  },
+  fn: {
+    left: [
+      [["F12"],["F1"],["F2"],["F3"],["F4"],["F5"],["Kp","切替","mod"]],
+      [[T],[T],[T],[T],[T],[T],O],
+      [[T],["1"],["2"],["3"],["4"],["5"],O],
+      [[T],["!","","new"],["\"","","new"],["#","","new"],["$","","new"],["%","","new"],null],
+      [[T],[T],["^"],[T],[T],null,null]
+    ],
+    right: [
+      [["Mod","","mod"],["F6"],["F7"],["F8"],["F9"],["F10"],["F11"]],
+      [O,["^"],["~"],["*"],["+"],["="],[T]],
+      [O,["6"],["7"],["8"],["9"],["0"],["-"]],
+      [null,["&","","new"],["'","","new"],["(","","new"],[")","","new"],[":","","new"],[T]],
+      [null,null,[T],[T],[T],[T],[T]]
+    ],
+    thumbL: { top:[[T],[T]], tall:[["Fn","押さえる","mod"],[T]], side:[[T],[T]] },
+    thumbR: { top:[[T],[T]], tall:[[T],["Fn","押さえる","mod"]], side:[[T],[T]] }
+  },
+  cmd: {
+    left: [
+      [O,O,O,O,O,O,O],
+      [O,O,O,O,O,O,O],
+      [O,["全選択","","new"],["cut","","new"],["copy","","new"],["paste","","new"],["undo","","new"],["redo","","new"]],
+      [O,O,O,O,O,O,null],
+      [O,O,O,O,O,null,null]
+    ],
+    right: [
+      [O,O,O,O,O,O,O],
+      [O,O,O,O,O,O,O],
+      [["redo","","new"],["undo","","new"],["paste","","new"],["copy","","new"],["cut","","new"],["全選択","","new"],O],
+      [null,O,O,O,O,O,O],
+      [null,null,O,O,O,O,O]
+    ],
+    thumbL: { top:[O,O], tall:[O,O], side:[O,["Cmd","押さえる","mod"]] },
+    thumbR: { top:[O,O], tall:[O,O], side:[O,["Cmd","押さえる","mod"]] }
+  }
+};
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+function key(x,y,w,h,k){
+  if (!k) return "";
+  const [t,sub,cls] = [k[0]||"", k[1]||"", k[2]||""];
+  const rc = cls==="mod"?"k-mod":cls==="new"?"k-new":cls==="skk"?"k-skk":cls==="off"?"k-off":"k";
+  let s = `<rect class="${rc}" x="${x}" y="${y}" width="${w}" height="${h}" rx="6"/>`;
+  const jp = /[^\x00-\x7F]/.test(t) || t.length > 3;
+  const cy = sub ? y + h/2 - 6 : y + h/2;
+  if (t) s += `<text class="${jp?"t-jp":"t"}" x="${x+w/2}" y="${cy}">${esc(t)}</text>`;
+  if (sub) s += `<text class="t-sub" x="${x+w/2}" y="${y+h/2+11}">${esc(sub)}</text>`;
+  return s;
+}
+function thumbs(x0, th, mirror){
+  let s = "";
+  // 上段の 2 キーは、内側寄りの 2 列（左は Space と Home、右は End と Enter）の上にある
+  const xs = [x0+50, x0+100];
+  th.top.forEach((k,i)=>{ s += key(xs[i], TH, 44, 44, k); });
+  const tx = mirror ? [x0+100, x0+150] : [x0, x0+50];
+  th.tall.forEach((k,i)=>{ s += key(tx[i], TH+50, 44, 94, k); });
+  const sx = mirror ? x0+50 : x0+100;
+  th.side.forEach((k,i)=>{ s += key(sx, TH+50+i*50, 44, 44, k); });
+  return s;
+}
+function render(name){
+  const L = layers[name];
+  let s = `<svg viewBox="0 0 860 500" role="img" aria-label="${name}">`;
+  s += `<rect class="band" x="${LX+6*STEP-5}" y="${TOP-6}" width="54" height="156" rx="8"/>`;
+  s += `<rect class="band" x="${RX-5}" y="${TOP-6}" width="54" height="156" rx="8"/>`;
+  s += `<text class="lbl" x="${LX}" y="22">左手</text><text class="lbl" x="${RX}" y="22">右手</text>`;
+  L.left.forEach((row,r)=>row.forEach((k,c)=>{ s += key(LX+c*STEP, TOP+r*STEP, 44, 44, k); }));
+  L.right.forEach((row,r)=>row.forEach((k,c)=>{ s += key(RX+c*STEP, TOP+r*STEP, 44, 44, k); }));
+  s += `<text class="lbl" x="250" y="${TH-10}">左親指</text><text class="lbl" x="${RX}" y="${TH-10}">右親指</text>`;
+  s += thumbs(250, L.thumbL, false);
+  s += thumbs(RX-50, L.thumbR, true);
+  s += `</svg>`;
+  return s;
+}
+document.querySelectorAll("[data-layer]").forEach(el => { el.innerHTML = render(el.dataset.layer); });
+</script>
