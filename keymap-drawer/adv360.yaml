@@ -21,8 +21,8 @@ layers:
     - INTERNATIONAL 1
     - ','
     - .
-    - V
-    - F
+    - Q
+    - X
   - - PRINTSCREEN
     - ''
     - Y
@@ -53,10 +53,10 @@ layers:
     - LSHFT
     - t: ;
       s: ;
-    - Q
+    - F
     - J
   - - K
-    - X
+    - V
     - '&td_home_pgup'
     - '&td_end_pgdn'
     - B
@@ -83,8 +83,8 @@ layers:
   - - t: BACKSPACE
       h: Fn
     - ''
-    - F
-    - V
+    - ''
+    - ''
     - /
     - RCTRL
   Kp:
@@ -197,50 +197,50 @@ layers:
     - ''
     - '='
     - +
-    - UP
+    - '"'
     - ':'
     - _
     - t: ▽
       type: trans
     - t: ▽
       type: trans
-    - ''
-  - - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - t: ▽
-      type: trans
-    - t: ▽
-      type: trans
-    - t: ▽
-      type: trans
-    - t: ▽
-      type: trans
-    - ''
-  - - ''
-    - LEFT
-    - DOWN
-    - RIGHT
-    - '"'
-    - '-'
-    - t: ▽
-      type: trans
     - '1'
-    - '2'
+  - - '2'
     - '3'
-  - - '4'
+    - '4'
     - '5'
+    - ''
     - t: ▽
       type: trans
     - t: ▽
       type: trans
-    - '6'
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - ''
+  - - '6'
     - '7'
     - '8'
     - '9'
     - '0'
+    - '-'
+    - t: ▽
+      type: trans
+    - ''
+    - ''
+    - ''
+  - - ''
+    - ''
+    - t: ▽
+      type: trans
+    - t: ▽
+      type: trans
+    - ''
+    - LEFT
+    - UP
+    - RIGHT
+    - DOWN
     - t: ▽
       type: trans
   - - t: ▽
