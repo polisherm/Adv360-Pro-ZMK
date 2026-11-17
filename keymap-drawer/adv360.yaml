@@ -82,11 +82,11 @@ layers:
       h: RSHFT
   - - t: BACKSPACE
       h: Fn
-    - ''
-    - ''
-    - ''
+    - LEFT
+    - DOWN
+    - UP
+    - RIGHT
     - /
-    - RCTRL
   Kp:
   - - '`'
     - '1'
@@ -227,20 +227,20 @@ layers:
     - '-'
     - t: ▽
       type: trans
-    - ''
-    - ''
-    - ''
-  - - ''
-    - ''
+    - '!'
+    - '@'
+    - '#'
+  - - $
+    - '%'
     - t: ▽
       type: trans
     - t: ▽
       type: trans
-    - ''
-    - LEFT
-    - DOWN
-    - UP
-    - RIGHT
+    - ^
+    - '&'
+    - '*'
+    - (
+    - ''''
     - t: ▽
       type: trans
   - - t: ▽
@@ -269,7 +269,8 @@ layers:
       type: trans
     - t: ▽
       type: trans
-    - ''''
+    - t: ▽
+      type: trans
     - t: ▽
       type: trans
   Mod:
