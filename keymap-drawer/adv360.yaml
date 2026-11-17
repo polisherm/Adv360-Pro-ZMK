@@ -238,9 +238,9 @@ layers:
       type: trans
     - ''
     - LEFT
+    - DOWN
     - UP
     - RIGHT
-    - DOWN
     - t: ▽
       type: trans
   - - t: ▽

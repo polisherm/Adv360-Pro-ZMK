@@ -1026,15 +1026,15 @@ text.label, text.footer {
 </g>
 <g transform="translate(1197, 294)" class="key keypos-56">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
-<text x="0" y="0" class="key tap">UP</text>
+<text x="0" y="0" class="key tap">DOWN</text>
 </g>
 <g transform="translate(1281, 294)" class="key keypos-57">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
-<text x="0" y="0" class="key tap">RIGHT</text>
+<text x="0" y="0" class="key tap">UP</text>
 </g>
 <g transform="translate(1365, 315)" class="key keypos-58">
 <rect rx="6" ry="6" x="-40" y="-40" width="80" height="80" class="key"/>
-<text x="0" y="0" class="key tap">DOWN</text>
+<text x="0" y="0" class="key tap">RIGHT</text>
 </g>
 <g transform="translate(1460, 315)" class="key trans keypos-59">
 <rect rx="6" ry="6" x="-50" y="-40" width="101" height="80" class="key trans"/>
