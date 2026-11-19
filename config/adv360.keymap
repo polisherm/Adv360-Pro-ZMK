@@ -194,7 +194,8 @@
 // - NUBS(\ and |) -> 出力されない
 // - NUHS(# and ~) -> ]/}
 
-// 左手の Q・X・F・J・K・V は、CorvusSKK の省略打ちの 2 打目も兼ねている。
+// 左手の K・X・F・J・Q・V は、CorvusSKK の省略打ちの 2 打目も兼ねている。
+// 左人差し指の下段の Q は、CorvusSKK のかな・カナの切り替えに使う。QWERTY の PC と同じ文字にそろえるため、K ではなく Q を出す。
 // 変換表は物理キーの位置で 2 打目を決めているため、これらのキーを動かすときは変換表も直す。
 // 対応は .claude/rules/skk-romanmap-coupling.md にある。
       keymap {
@@ -205,9 +206,9 @@
 
             bindings = <
                 &kp ESCAPE  &kp N1              &kp N2    &kp N3            &kp N4          &kp N5 &tog KEYPAD                                                                                   &mo MOD          &kp N6   &kp N7   &kp N8   &kp N9 &kp N0    &kp MINUS
-                &kp TAB     &kp INTERNATIONAL_1 &kp COMMA &kp PERIOD        &kp Q           &kp X  &kp PRINTSCREEN                                                                              &none            &kp Y    &kp G    &kp C    &kp R  &kp L     &kp LEFT_BRACKET
+                &kp TAB     &kp INTERNATIONAL_1 &kp COMMA &kp PERIOD        &kp K           &kp X  &kp PRINTSCREEN                                                                              &none            &kp Y    &kp G    &kp C    &kp R  &kp L     &kp LEFT_BRACKET
                 &kp LCTRL   &kp A               &kp O     &kp E             &kp U           &kp I  &td_sac_paste   &kp LCTRL          &kp LALT            &kp LGUI            &kp RALT           &none            &kp D   &kp H    &kp T    &kp N  &kp S     &minus_qmark
-                &kp LSHFT   &semi_colon_only    &kp F     &kp J             &kp K           &kp V                                    &td_home_pgup       &td_end_pgdn                                            &kp B    &kp M    &kp W    &kp P  &kp Z     &kp RSHFT
+                &kp LSHFT   &semi_colon_only    &kp F     &kp J             &kp Q           &kp V                                   &td_home_pgup       &td_end_pgdn                                            &kp B    &kp M    &kp W    &kp P  &kp Z     &kp RSHFT
                 &mo COMMAND &kp SINGLE_QUOTE    &kp INT3  &kp RIGHT_BRACKET &kp NON_US_HASH        &lt FN DEL      &SandS LSHFT SPACE &lt_cmd COMMAND INTERNATIONAL_5 &lt_cmd COMMAND INTERNATIONAL_4 &SandS RSHFT ENTER &lt FN BACKSPACE          &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp FSLH
             >;
         };

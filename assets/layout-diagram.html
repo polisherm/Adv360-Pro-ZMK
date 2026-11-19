@@ -56,15 +56,15 @@ svg .lbl { fill: var(--muted); font-family: var(--font-body); font-size: 12px; }
 
 <main>
   <header style="display:flex;flex-direction:column;gap:6px">
-    <h1>Adv360 キー配列（2026-11-17）</h1>
-    <p class="lead">矢印を右手の一番下の段に戻し、Fn の 4 行目に記号を戻した時点。キーの中の文字は、JIS 配列の Windows で実際に出る文字。小さい文字は Shift を押したときに出る文字か、長押しの役目。</p>
+    <h1>Adv360 キー配列（2026-11-19）</h1>
+    <p class="lead">かな・カナの切り替えを会社の QWERTY と同じ q にそろえ、左人差し指の K と Q を入れ替えた時点。キーの中の文字は、JIS 配列の Windows で実際に出る文字。小さい文字は Shift を押したときに出る文字か、長押しの役目。</p>
   </header>
 
   <section class="card">
     <h2>Base（ふだんの層）</h2>
     <div class="diagram" data-layer="base"></div>
     <div class="legend">
-      <span><i class="sw" style="background:var(--accent-soft);border-color:var(--accent)"></i>11/17 に動かしたキー</span>
+      <span><i class="sw" style="background:var(--accent-soft);border-color:var(--accent)"></i>最近動かしたキー</span>
       <span><i class="sw" style="background:var(--mod-soft);border-color:var(--mod)"></i>修飾キー・レイヤーの入口</span>
       <span><i class="sw" style="background:var(--raised)"></i>一段高い列</span>
     </div>
@@ -91,9 +91,9 @@ const layers = {
   base: {
     left: [
       [["Esc"],["1","!"],["2","\""],["3","#"],["4","$"],["5","%"],["Kp","切替","mod"]],
-      [["Tab"],["\\","_"],[",","<"],[".",">"],["Q","","new"],["X","","new"],["PrSc"]],
+      [["Tab"],["\\","_"],[",","<"],[".",">"],["K","","new"],["X"],["PrSc"]],
       [["Ctrl","","mod"],["A"],["O"],["E"],["U"],["I"],["全+C","2回:貼付"]],
-      [["Shift","","mod"],[";"],["F","","new"],["J"],["K"],["V","","new"],null],
+      [["Shift","","mod"],[";"],["F"],["J"],["Q","かな/カナ","new"],["V"],null],
       [["Cmd","","mod"],[":","*"],["¥","|"],["[","{"],["]","}"],null,null]
     ],
     right: [
