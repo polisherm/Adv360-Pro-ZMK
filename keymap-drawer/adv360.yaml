@@ -21,7 +21,7 @@ layers:
     - INTERNATIONAL 1
     - ','
     - .
-    - Q
+    - K
     - X
   - - PRINTSCREEN
     - ''
@@ -55,7 +55,7 @@ layers:
       s: ;
     - F
     - J
-  - - K
+  - - Q
     - V
     - '&td_home_pgup'
     - '&td_end_pgdn'
