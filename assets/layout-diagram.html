@@ -56,8 +56,8 @@ svg .lbl { fill: var(--muted); font-family: var(--font-body); font-size: 12px; }
 
 <main>
   <header style="display:flex;flex-direction:column;gap:6px">
-    <h1>Adv360 キー配列（2026-11-19）</h1>
-    <p class="lead">かな・カナの切り替えを会社の QWERTY と同じ q にそろえ、左人差し指の K と Q を入れ替えた時点。キーの中の文字は、JIS 配列の Windows で実際に出る文字。小さい文字は Shift を押したときに出る文字か、長押しの役目。</p>
+    <h1>Adv360 キー配列（2026-11-20）</h1>
+    <p class="lead">左手の中指と薬指の下段で F と J を入れ替えた時点。キーの中の文字は、JIS 配列の Windows で実際に出る文字。小さい文字は Shift を押したときに出る文字か、長押しの役目。</p>
   </header>
 
   <section class="card">
@@ -91,9 +91,9 @@ const layers = {
   base: {
     left: [
       [["Esc"],["1","!"],["2","\""],["3","#"],["4","$"],["5","%"],["Kp","切替","mod"]],
-      [["Tab"],["\\","_"],[",","<"],[".",">"],["K","","new"],["X"],["PrSc"]],
+      [["Tab"],["\\","_"],[",","<"],[".",">"],["K"],["X"],["PrSc"]],
       [["Ctrl","","mod"],["A"],["O"],["E"],["U"],["I"],["全+C","2回:貼付"]],
-      [["Shift","","mod"],[";"],["F"],["J"],["Q","かな/カナ","new"],["V"],null],
+      [["Shift","","mod"],[";"],["J","","new"],["F","","new"],["Q","かな/カナ"],["V"],null],
       [["Cmd","","mod"],[":","*"],["¥","|"],["[","{"],["]","}"],null,null]
     ],
     right: [
