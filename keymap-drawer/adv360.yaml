@@ -53,8 +53,8 @@ layers:
     - LSHFT
     - t: ;
       s: ;
-    - F
     - J
+    - F
   - - Q
     - V
     - '&td_home_pgup'
